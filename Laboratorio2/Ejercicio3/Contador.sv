@@ -1,146 +1,55 @@
 module Contador #(
     parameter int n = 19
-) (
-    input logic a,
-    output logic b,
-	
-	 input logic clk,
-    input logic restart,
-    input logic comenzar,
-	 input logic menos,
-
-	 output logic [6:0] display1, 
-	 output logic [6:0] display2, 
-	 output logic [6:0] display3, 
+)(
+    input logic btn,
+	 input logic reset,
+    output logic [6:0] display1,
+    output logic [6:0] display2, 
+	 output logic [6:0] display3,
 	 output logic [6:0] display4, 
 	 output logic [6:0] display5, 
 	 output logic [6:0] display6
-	 
 );
-	
-    reg [n-1:0] binario = {n{1'b1}};
-	 reg [3:0] digitos[5:0];
-	 
-	 assign b=a;
-	 
-	 logic conteo=0;
-	 logic dis_estado = 0;
-	 reg [26:0] counter;
 
-    
-    initial begin
-		automatic int decimal=0;
-		for (int i = 0; i < n; i++) begin
-        decimal = decimal + (binario[i] << i);
-		end
-		$display("Decimal: %d", decimal);
-		
-		decimal= decimal-1;
-		
+    reg [23:0] count = 0;  // Número inicial
+	 reg [23:0] temp = 0;  // Número inicial
+	 reg [3:0] digitos[5:0];
+	 reg [3:0] last_digit;
+
+    always @(posedge btn or posedge reset) begin
+		if (reset) begin
+		count <= 2 * 0;
+			for (int i = 0; i < n; i++) begin
+				count <= count + (2 ** n);
+			end
+			$display("%d", count);
+		end 
+      else if (count > 0)
+			count <= count - 1;
+    end
+
+    always @(count) begin
+		temp = count;
 		for (int i = 6; i > 0; i--) begin
-			digitos[i-1] = decimal % 10;
-			case (decimal)
-            0: digitos[i-1] = 4'b0000;
-            1: digitos[i-1] = 4'b0001;
-            2: digitos[i-1] = 4'b0010;
-            3: digitos[i-1] = 4'b0011;
-            4: digitos[i-1] = 4'b0100;
-            5: digitos[i-1] = 4'b0101;
-            6: digitos[i-1] = 4'b0110;
-            7: digitos[i-1] = 4'b0111;
-            8: digitos[i-1] = 4'b1000;
-            9: digitos[i-1] = 4'b1001;
-            default: binario = 4'b0000; // Valor por defecto en caso de un número fuera de rango
+			last_digit = temp % 10;
+			case (last_digit)
+            6'd0: digitos[i-1] = 4'b0000;
+				6'd1: digitos[i-1] = 4'b0001;
+				6'd2: digitos[i-1] = 4'b0010;
+				6'd3: digitos[i-1] = 4'b0011;
+				6'd4: digitos[i-1] = 4'b0100;
+				6'd5: digitos[i-1] = 4'b0101;
+				6'd6: digitos[i-1] = 4'b0110;
+				6'd7: digitos[i-1] = 4'b0111;
+				6'd8: digitos[i-1] = 4'b1000;
+				6'd9: digitos[i-1] = 4'b1001;
+				default: digitos[i-1] <= 4'b0000; // Apagar displays si el número está fuera de rango
         endcase
 		  
-			$display("Dígito %d: Dígito %b: Decimal %d", decimal % 10, digitos[i-1], decimal);
-			
-			decimal = decimal / 10;
-			
-		end
-		
-		
-		
-		for (int i = 0; i < 6; i++) begin
-			$display("Dígito %0d: %b", i, digitos[i]);
-		end
+		  $display("Dígito %d: Dígito %b: Decimal %d", last_digit, digitos[i-1], temp);
+		  temp = temp/10;
+		end 
     end
-	 
-	 
-	 
-    always_ff @(posedge clk or posedge restart) begin
-		if (restart)begin
-			binario = {n{1'b1}};
-			conteo <= 0;
-		end
-		
-		else begin 
-			if (comenzar == 0)  
-				conteo <= 1;
-			else if (contador == 50000000 - 1 && conteo) begin 
-				contador <= 0;
-				int decimal=0;
-				binario= binario-1;
-				for (int i = 0; i < n; i++) begin
-					decimal = decimal + (binario[i] << i);
-				end
-				
-				for (int i = 6; i > 0; i--) begin
-					digitos[i-1] = decimal % 10;
-					case (decimal)
-						0: digitos[i-1] = 4'b0000;
-						1: digitos[i-1] = 4'b0001;
-						2: digitos[i-1] = 4'b0010;
-						3: digitos[i-1] = 4'b0011;
-						4: digitos[i-1] = 4'b0100;
-						5: digitos[i-1] = 4'b0101;
-						6: digitos[i-1] = 4'b0110;
-						7: digitos[i-1] = 4'b0111;
-						8: digitos[i-1] = 4'b1000;
-						9: digitos[i-1] = 4'b1001;
-						default: binario = 4'b0000;
-					endcase
-					decimal = decimal / 10;
-				end
-			end 
-			
-			else if (comenzar) begin
-				contador = contador + 1; end
-				
-			else if (menos == 0 && dis_estado == 0 && conteo == 0) begin
-					dis_estado = 1;
-					
-				int decimal=0;
-				binario= binario-1;
-				for (int i = 0; i < n; i++) begin
-					decimal = decimal + (binario[i] << i);
-				end
-
-					for (int i = 6; i > 0; i--) begin
-						digitos[i-1] = decimal % 10;
-						case (decimal)
-							0: digitos[i-1] = 4'b0000;
-							1: digitos[i-1] = 4'b0001;
-							2: digitos[i-1] = 4'b0010;
-							3: digitos[i-1] = 4'b0011;
-							4: digitos[i-1] = 4'b0100;
-							5: digitos[i-1] = 4'b0101;
-							6: digitos[i-1] = 4'b0110;
-							7: digitos[i-1] = 4'b0111;
-							8: digitos[i-1] = 4'b1000;
-							9: digitos[i-1] = 4'b1001;
-							default: binario = 4'b0000;
-						endcase
-						decimal = decimal / 10;
-					end
-			end
-					
-			else if (menos == 1)
-					dis_estado = 0;
-			end
-		end
-	 
-	 
 	 ejercicio1 dis1(
 			.A(digitos[5][3]), 
 			.B(digitos[5][2]), 
@@ -154,7 +63,7 @@ module Contador #(
 			.f(display1[5]), 
 			.g(display1[6])
 			);
-	ejercicio1 dis2(
+	 ejercicio1 dis2(
 			.A(digitos[4][3]), 
 			.B(digitos[4][2]), 
 			.C(digitos[4][1]), 
@@ -219,4 +128,5 @@ module Contador #(
 			.f(display6[5]), 
 			.g(display6[6])
 			);
+	 
 endmodule
