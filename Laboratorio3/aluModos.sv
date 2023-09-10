@@ -11,21 +11,48 @@ module aluModos #(
 	 output logic [6:0] display6
 );
 
-    reg [3:0] modo = 0;   
-	 reg [3:0] digitos;
+    reg [n-1b :0] modo = 0;   
+	 reg [n-1:0] digitos= 4'b0000;
+	 logic flag = 0;
 
-    always @(posedge selector or posedge start) begin
+    always @(negedge selector or negedge start) begin
 		if (start) begin
-		modo <= 0;
+			if (modo < 9) begin
+				modo <= modo + 1;
+			end else begin
+				
+			end
+		end else begin
+			if (selector) begin
+				if (modo == 0)begin
+				end
+				if (modo == 1)begin
+				end
+				if (modo == 2)begin
+				end
+				if (modo == 3)begin
+				end
+				if (modo == 4)begin
+				end
+				if (modo == 5)begin
+				end
+				if (modo == 6)begin
+				end
+				if (modo == 7)begin
+				end
+				if (modo == 8)begin
+				end
+				if (modo == 9)begin
+				end
+			end
 		end 
-      else if (modo < 9)
-			modo <= modo + 1;
-		else 
-			modo <=0;
-    end
-
-    always @(modo) begin
+		
+		
+		
+		
+	end
 	 
+    always @(modo) begin
 		$display("%b: %b", digitos, display1);
 		case (modo)
             6'd0: digitos = 4'b0000;
@@ -40,8 +67,9 @@ module aluModos #(
 				6'd9: digitos = 4'b1001;
 				default: digitos <= 4'b1111; // Apagar displays si el número está fuera de rango
         endcase
-		  
     end
+	 
+	 
 	 decodificador_modos disp(
 			.A(digitos[3]), 
 			.B(digitos[2]), 

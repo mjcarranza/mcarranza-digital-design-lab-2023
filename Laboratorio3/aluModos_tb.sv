@@ -1,8 +1,8 @@
 module aluModos_tb();
 
     // Señales de prueba
-    logic start = 0;
-    logic button = 0;
+    logic start = 1;
+    logic button = 1;
     logic [6:0] display1;
     logic [6:0] display2;
     logic [6:0] display3;
@@ -24,53 +24,60 @@ module aluModos_tb();
 	 
     initial begin
 	 
-		button = 1;
-		#1;
 		button = 0;
+		#1;
+		button = 1;
 		#10;
-		button = 1;
-		#1;
 		button = 0;
+		#1;
+		button = 1;
 		#10;
-		button = 1;
-		#1;
 		button = 0;
+		#1;
+		button = 1;
 		#10;
-		button = 1;
-		#1;
 		button = 0;
+		#1;
+		button = 1;
 		#10;
-		button = 1;
-		#1;
 		button = 0;
+		#1;
+		button = 1;
 		#10;
-		button = 1;
-		#1;
 		button = 0;
+		#1;
+		button = 1;
 		#10;
-		button = 1;
-		#1;
 		button = 0;
+		#1;
+		button = 1;
 		#10;
-		button = 1;
+		
+		
+		start = 0;
 		#1;
-		button = 0;
+		start = 1;
 		#10;
-		button = 1;
-		#1;
+		
 		button = 0;
+		#1;
+		button = 1;
 		#10;
-		button = 1;
-		#1;
 		button = 0;
+		#1;
+		button = 1;
 		#10;
-		button = 1;
-		#1;
 		button = 0;
+		#1;
+		button = 1;
 		#10;
-		button = 1;
-		#1;
 		button = 0;
+		#1;
+		button = 1;
+		#10;
+		button = 0;
+		#1;
+		button = 1;
 		#10;
 		
 	 

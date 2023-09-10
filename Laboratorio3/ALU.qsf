@@ -93,13 +93,13 @@ set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id aluModos_tb
 set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME aluModos_tb -section_id aluModos_tb
 set_global_assignment -name EDA_TEST_BENCH_FILE aluModos_tb.sv -section_id aluModos_tb
 set_global_assignment -name SYSTEMVERILOG_FILE decodificador_modos.sv
-set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
-set_location_assignment PIN_AH28 -to display1[6]
-set_location_assignment PIN_AG28 -to display1[5]
-set_location_assignment PIN_AF28 -to display1[4]
+set_location_assignment PIN_AE26 -to display1[6]
+set_location_assignment PIN_AE27 -to display1[5]
+set_location_assignment PIN_AE28 -to display1[4]
 set_location_assignment PIN_AG27 -to display1[3]
-set_location_assignment PIN_AE28 -to display1[2]
-set_location_assignment PIN_AE27 -to display1[1]
-set_location_assignment PIN_AE26 -to display1[0]
+set_location_assignment PIN_AF28 -to display1[2]
+set_location_assignment PIN_AG28 -to display1[1]
+set_location_assignment PIN_AH28 -to display1[0]
 set_location_assignment PIN_AA14 -to selector
 set_location_assignment PIN_AA15 -to start
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
