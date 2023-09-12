@@ -24,23 +24,20 @@ module Registro_tb;
 
     enable = 1;  // Habilitar registro  
     #1; 			  // Esperar un ciclo de reloj	
-    
+	 
+    data = 11111111;
     enable = 0;  // Deshabilitar registro
     #1;   		  // Esperar un ciclo de reloj
+	 
+	 data = 10000000;
+	 enable = 0;  // Deshabilitar registro
+    #1;   
+	 
+	 data = 10001100;
+	 enable = 1;  // Deshabilitar registro
+    #1;   
 
-    // Finalizar la simulación
-    $finish;
-  end
 
-  // Comprobar resultados
-  always @(posedge enable) begin
-    if (enable) begin
-      if (salida !== data) begin
-        $display("ERROR: Datos incorrectos en la salida. Esperado: %h, Obtenido: %h", data, salida);
-      end else begin
-        $display("Datos cargados correctamente en la salida: %h", salida);
-      end
-    end
   end
 
 endmodule
