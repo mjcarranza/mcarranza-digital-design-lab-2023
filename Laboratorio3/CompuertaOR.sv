@@ -1,10 +1,18 @@
+module CompuertaOR 
+	#(parameter N=4) 
+	(
+	input logic [N-1:0] iA, iB, 
+	output logic [N-1:0] oS   
+	);
+		
+	always_comb
+	begin 
+		for(int i = 0; i < N; i = i + 1)
+		begin 
+	
+			oS[i] = iA[i] | iB[i];
+		end
+	
+	end 
 
-
-module CompuertaOR #(parameter N=2) (
-  input wire [N-1:0] a, // Entradas de la compuerta AND
-  output wire out       // Salida de la compuerta AND
-);
-
-  assign out = |a; // La salida es la operación AND de todas las entradas a través de la función "&".
-
-endmodule
+endmodule 

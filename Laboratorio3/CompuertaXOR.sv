@@ -1,10 +1,18 @@
+module CompuertaXOR 
+	#(parameter N=4) 
+	(
+	input logic [N-1:0] iA, iB, 
+	output logic [N-1:0] oS   
+	);
+		
+	always_comb
+	begin 
+		for(int i = 0; i < N; i = i + 1)
+		begin 
+	
+			oS[i] = iA[i] ^ iB[i];
+		end
+	
+	end 
 
-
-module CompuertaXOR #(parameter N=4) (
-  input wire [N-1:0] a, // Entradas de la compuerta XOR
-  output wire out       // Salida de la compuerta XOR
-);
-
-  assign out = ^a; // La salida es la operación XOR de todas las entradas
-
-endmodule
+endmodule 

@@ -151,18 +151,21 @@ module aluModos #(
     );
 	 
 	 CompuertaAND #(n) dutAND (
-		.a(A),
-		.out(resultados[5][0])
+		.iA(A),
+		.iB(B),
+		.oS(resultados[5])
 	 );
 	 
 	 CompuertaOR #(n) dutOR (
-		.a(A),
-		.out(resultados[6][0])
+		.iA(A),
+		.iB(B),
+		.oS(resultados[6])
 	 );
 	 
 	 CompuertaXOR #(n) dutXOR (
-		.a(A),
-		.out(resultados[7][0])
+		.iA(A),
+		.iB(B),
+		.oS(resultados[7])
 	 );
 	 
 	 shiftLeft #(n) dutLeft (
