@@ -30,9 +30,36 @@ module aluModos_tb();
 	 
 	 
     initial begin
-	
+	 
+		//SUMADOR
+		$display("Sumador");
+		start = 0;
+		#1;
+		start = 1;
+		
+      A_input = 4'b0101;
+      B_input = 4'b1100;
+      #40;
+		
+      A_input = 4'b1111;
+      B_input = 4'b1111;
+      #40;
+		
+      A_input = 4'b1010;
+      B_input = 4'b1111;
+      #40;
+		
+      A_input = 4'b000;
+      B_input = 4'b000;
+      #40;
+		
+		
 		// RESTADOR
 		$display("Restador");
+		reset = 0;
+		#1;
+		reset = 1;
+		
 		button = 0;
 		#1;
 		button = 1;
@@ -58,32 +85,93 @@ module aluModos_tb();
       B_input = 4'b1000;
       #40;
 		
-		
-		//SUMADOR
-		$display("Sumador");
+		// DIVISION
+		$display("Division");
 		reset = 0;
 		#1;
 		reset = 1;
 		
+		button = 0;
+		#1;
+		button = 1;
+		#10;
+		
+		button = 0;
+		#1;
+		button = 1;
+		#10;
+		
+		button = 0;
+		#1;
+		button = 1;
+		#10;
+		
 		start = 0;
 		#1;
 		start = 1;
-		
-      A_input = 4'b0101;
-      B_input = 4'b1100;
-      #40;
-		
+
       A_input = 4'b1111;
-      B_input = 4'b1111;
+      B_input = 4'b0011;
+      #40;
+
+      A_input = 4'b1111;
+      B_input = 4'b1010;
+      #40;
+
+      A_input = 4'b1111;
+      B_input = 4'b0101;
       #40;
 		
-      A_input = 4'b1010;
-      B_input = 4'b1111;
+      A_input = 4'b0011;
+      B_input = 4'b0001;
       #40;
 		
-      A_input = 4'b000;
-      B_input = 4'b000;
+		// Modulo
+		$display("Modulo");
+		reset = 0;
+		#1;
+		reset = 1;
+		
+		button = 0;
+		#1;
+		button = 1;
+		#10;
+		
+		button = 0;
+		#1;
+		button = 1;
+		#10;
+		
+		button = 0;
+		#1;
+		button = 1;
+		#10;
+		
+		button = 0;
+		#1;
+		button = 1;
+		#10;
+		
+		start = 0;
+		#1;
+		start = 1;
+
+      A_input = 4'b1111;
+      B_input = 4'b0011;
       #40;
+
+      A_input = 4'b1111;
+      B_input = 4'b1010;
+      #40;
+
+      A_input = 4'b1111;
+      B_input = 4'b0101;
+      #40;
+		
+      A_input = 4'b0011;
+      B_input = 4'b0001;
+      #40;
+		
 		
 		// COMPUERTA AND
 		$display("AND");

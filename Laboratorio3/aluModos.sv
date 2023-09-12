@@ -74,6 +74,14 @@ module aluModos #(
 					end
 				end
 				
+				6'd3: begin 
+					digitos_temp = resultados[3];
+				end
+				
+				6'd4: begin 
+					digitos_temp = resultados[4];
+				end
+				
 				6'd5: begin 
 					$display("AND %b", resultados[5]);
 					digitos_temp = resultados[5];
@@ -148,6 +156,22 @@ module aluModos #(
         .B(B),
         .resta(resultados[1]),
         .Cout(flags[3])
+    );
+	 
+	 DivisionNBit #(
+        .n(n)
+    ) dutDiv (
+        .num(A),
+        .div(B),
+        .i(resultados[3])
+    );
+	 
+	 DivisionNBit #(
+        .n(n)
+    ) dutMod (
+        .num(A),
+        .div(B),
+        .res(resultados[4])
     );
 	 
 	 CompuertaAND #(n) dutAND (
