@@ -52,8 +52,6 @@ set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_
 set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_symbol
 set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_signal_integrity
 set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_boundary_scan
-set_global_assignment -name SYSTEMVERILOG_FILE Suma1Bit.sv
-set_global_assignment -name SYSTEMVERILOG_FILE Suma1Bit_tb.sv
 set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
 set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
 set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
@@ -63,36 +61,21 @@ set_global_assignment -name EDA_NATIVELINK_SIMULATION_TEST_BENCH aluModos_tb -se
 set_global_assignment -name EDA_TEST_BENCH_NAME Suma1Bit_tb -section_id eda_simulation
 set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id Suma1Bit_tb
 set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME Suma1Bit_tb -section_id Suma1Bit_tb
-set_global_assignment -name SYSTEMVERILOG_FILE Restador1Bit.sv
-set_global_assignment -name SYSTEMVERILOG_FILE Restador1Bit_tb.sv
 set_global_assignment -name EDA_TEST_BENCH_NAME Restador1Bit_tb -section_id eda_simulation
 set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id Restador1Bit_tb
 set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME Restador1Bit_tb -section_id Restador1Bit_tb
-set_global_assignment -name SYSTEMVERILOG_FILE SumaNBit.sv
-set_global_assignment -name SYSTEMVERILOG_FILE SumaNBit_tb.sv
 set_global_assignment -name EDA_TEST_BENCH_NAME SumaNBit_tb -section_id eda_simulation
 set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id SumaNBit_tb
 set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME SumaNBit_tb -section_id SumaNBit_tb
-set_global_assignment -name SYSTEMVERILOG_FILE RestadorNBit.sv
-set_global_assignment -name SYSTEMVERILOG_FILE RestadorNBit_tb.sv
 set_global_assignment -name EDA_TEST_BENCH_NAME RestadorNBit_tb -section_id eda_simulation
 set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id RestadorNBit_tb
 set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME RestadorNBit_tb -section_id RestadorNBit_tb
-set_global_assignment -name SYSTEMVERILOG_FILE aluModos.sv
-set_global_assignment -name SYSTEMVERILOG_FILE decodificador.sv
-set_global_assignment -name SYSTEMVERILOG_FILE aluModos_tb.sv
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
-set_global_assignment -name EDA_TEST_BENCH_FILE Suma1Bit_tb.sv -section_id Suma1Bit_tb
-set_global_assignment -name EDA_TEST_BENCH_FILE Restador1Bit_tb.sv -section_id Restador1Bit_tb
-set_global_assignment -name EDA_TEST_BENCH_FILE SumaNBit_tb.sv -section_id SumaNBit_tb
-set_global_assignment -name EDA_TEST_BENCH_FILE RestadorNBit_tb.sv -section_id RestadorNBit_tb
 set_global_assignment -name EDA_TEST_BENCH_NAME aluModos_tb -section_id eda_simulation
 set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id aluModos_tb
 set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME aluModos_tb -section_id aluModos_tb
-set_global_assignment -name EDA_TEST_BENCH_FILE aluModos_tb.sv -section_id aluModos_tb
-set_global_assignment -name SYSTEMVERILOG_FILE decodificador_modos.sv
 set_location_assignment PIN_AE26 -to display1[6]
 set_location_assignment PIN_AE27 -to display1[5]
 set_location_assignment PIN_AE28 -to display1[4]
@@ -146,4 +129,37 @@ set_location_assignment PIN_AB26 -to display6[2]
 set_location_assignment PIN_AA26 -to display6[1]
 set_location_assignment PIN_AA25 -to display6[0]
 set_location_assignment PIN_W15 -to reset
+set_global_assignment -name SYSTEMVERILOG_FILE shiftRight_tb.sv
+set_global_assignment -name SYSTEMVERILOG_FILE shiftRight.sv
+set_global_assignment -name SYSTEMVERILOG_FILE shiftLeft_tb.sv
+set_global_assignment -name SYSTEMVERILOG_FILE shiftLeft.sv
+set_global_assignment -name SYSTEMVERILOG_FILE Registro_tb.sv
+set_global_assignment -name SYSTEMVERILOG_FILE Registro.sv
+set_global_assignment -name SYSTEMVERILOG_FILE CompuertaXOR_tb.sv
+set_global_assignment -name SYSTEMVERILOG_FILE CompuertaXOR.sv
+set_global_assignment -name SYSTEMVERILOG_FILE CompuertaOR_tb.sv
+set_global_assignment -name SYSTEMVERILOG_FILE CompuertaOR.sv
+set_global_assignment -name SYSTEMVERILOG_FILE CompuertaAND_tb.sv
+set_global_assignment -name SYSTEMVERILOG_FILE CompuertaAND.sv
+set_global_assignment -name SYSTEMVERILOG_FILE Suma1Bit.sv
+set_global_assignment -name SYSTEMVERILOG_FILE Suma1Bit_tb.sv
+set_global_assignment -name SYSTEMVERILOG_FILE Restador1Bit.sv
+set_global_assignment -name SYSTEMVERILOG_FILE Restador1Bit_tb.sv
+set_global_assignment -name SYSTEMVERILOG_FILE SumaNBit.sv
+set_global_assignment -name SYSTEMVERILOG_FILE SumaNBit_tb.sv
+set_global_assignment -name SYSTEMVERILOG_FILE RestadorNBit.sv
+set_global_assignment -name SYSTEMVERILOG_FILE RestadorNBit_tb.sv
+set_global_assignment -name SYSTEMVERILOG_FILE aluModos.sv
+set_global_assignment -name SYSTEMVERILOG_FILE decodificador.sv
+set_global_assignment -name SYSTEMVERILOG_FILE aluModos_tb.sv
+set_global_assignment -name SYSTEMVERILOG_FILE decodificador_modos.sv
+set_global_assignment -name EDA_TEST_BENCH_NAME CompuertaAND_tb -section_id eda_simulation
+set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id CompuertaAND_tb
+set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME CompuertaAND_tb -section_id CompuertaAND_tb
+set_global_assignment -name EDA_TEST_BENCH_FILE Suma1Bit_tb.sv -section_id Suma1Bit_tb
+set_global_assignment -name EDA_TEST_BENCH_FILE Restador1Bit_tb.sv -section_id Restador1Bit_tb
+set_global_assignment -name EDA_TEST_BENCH_FILE SumaNBit_tb.sv -section_id SumaNBit_tb
+set_global_assignment -name EDA_TEST_BENCH_FILE RestadorNBit_tb.sv -section_id RestadorNBit_tb
+set_global_assignment -name EDA_TEST_BENCH_FILE aluModos_tb.sv -section_id aluModos_tb
+set_global_assignment -name EDA_TEST_BENCH_FILE CompuertaAND_tb.sv -section_id CompuertaAND_tb
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

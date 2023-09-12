@@ -30,7 +30,9 @@ module aluModos_tb();
 	 
 	 
     initial begin
-	 
+	
+		// RESTADOR
+		$display("Restador");
 		button = 0;
 		#1;
 		button = 1;
@@ -39,30 +41,26 @@ module aluModos_tb();
 		start = 0;
 		#1;
 		start = 1;
-		
-		$display("cambio");
-		// Prueba 1
+
       A_input = 4'b0101;
       B_input = 4'b1100;
       #40;
-		
-		
-		
-		// Prueba 1
+
       A_input = 4'b1111;
       B_input = 4'b1111;
       #40;
-		
-		// Prueba 1
+
       A_input = 4'b1010;
       B_input = 4'b1111;
       #40;
 		
-		// Prueba 1
       A_input = 4'b0000;
       B_input = 4'b1000;
       #40;
 		
+		
+		//SUMADOR
+		$display("Sumador");
 		reset = 0;
 		#1;
 		reset = 1;
@@ -71,32 +69,291 @@ module aluModos_tb();
 		#1;
 		start = 1;
 		
-		$display("cambio");
-		// Prueba 1
       A_input = 4'b0101;
       B_input = 4'b1100;
       #40;
 		
-		// Prueba 1
       A_input = 4'b1111;
       B_input = 4'b1111;
       #40;
 		
-		// Prueba 1
       A_input = 4'b1010;
       B_input = 4'b1111;
       #40;
 		
-		// Prueba 1
       A_input = 4'b000;
       B_input = 4'b000;
       #40;
 		
+		// COMPUERTA AND
+		$display("AND");
+		reset = 0;
+		#1;
+		reset = 1;
 		
+		button = 0;
+		#1;
+		button = 1;
+		#10;
+		
+		button = 0;
+		#1;
+		button = 1;
+		#10;
+		
+		button = 0;
+		#1;
+		button = 1;
+		#10;
+		
+		button = 0;
+		#1;
+		button = 1;
+		#10;
+		
+		button = 0;
+		#1;
+		button = 1;
+		#10;
+		
+		start = 0;
+		#1;
+		start = 1;
 	
-		
-		
+		A_input = 4'b0001;
+		#40;
 
+		A_input = 4'b1111;
+		#40;
+
+		A_input = 4'b0011;
+		#40;
+		
+		//COMPUERTA OR
+		$display("OR");
+		reset = 0;
+		#1;
+		reset = 1;
+		
+		button = 0;
+		#1;
+		button = 1;
+		#10;
+		
+		button = 0;
+		#1;
+		button = 1;
+		#10;
+		
+		button = 0;
+		#1;
+		button = 1;
+		#10;
+		
+		button = 0;
+		#1;
+		button = 1;
+		#10;
+		
+		button = 0;
+		#1;
+		button = 1;
+		#10;
+		
+		button = 0;
+		#1;
+		button = 1;
+		#10;
+		
+		start = 0;
+		#1;
+		start = 1;
+	
+		A_input = 4'b0001;
+		#40;
+
+		A_input = 4'b0000;
+		#40;
+
+		A_input = 4'b0011;
+		#40;
+		
+		//COMPUERTA xOR
+		$display("XOR");
+		reset = 0;
+		#1;
+		reset = 1;
+		
+		button = 0;
+		#1;
+		button = 1;
+		#10;
+		
+		button = 0;
+		#1;
+		button = 1;
+		#10;
+		
+		button = 0;
+		#1;
+		button = 1;
+		#10;
+		
+		button = 0;
+		#1;
+		button = 1;
+		#10;
+		
+		button = 0;
+		#1;
+		button = 1;
+		#10;
+		
+		button = 0;
+		#1;
+		button = 1;
+		#10;
+		
+		button = 0;
+		#1;
+		button = 1;
+		#10;
+		
+		start = 0;
+		#1;
+		start = 1;
+	
+		A_input = 4'b0001;
+		#40;
+
+		A_input = 4'b1111;
+		#40;
+
+		A_input = 4'b0010;
+		#40;
+		
+		//COMPUERTA LEFT
+		$display("LEFT");
+		reset = 0;
+		#1;
+		reset = 1;
+		
+		button = 0;
+		#1;
+		button = 1;
+		#10;
+		
+		button = 0;
+		#1;
+		button = 1;
+		#10;
+		
+		button = 0;
+		#1;
+		button = 1;
+		#10;
+		
+		button = 0;
+		#1;
+		button = 1;
+		#10;
+		
+		button = 0;
+		#1;
+		button = 1;
+		#10;
+		
+		button = 0;
+		#1;
+		button = 1;
+		#10;
+		
+		button = 0;
+		#1;
+		button = 1;
+		#10;
+		
+		button = 0;
+		#1;
+		button = 1;
+		#10;
+		
+		start = 0;
+		#1;
+		start = 1;
+	
+		A_input = 4'b0001;
+		#40;
+
+		A_input = 4'b1111;
+		#40;
+
+		A_input = 4'b0011;
+		#40;
+		
+		//COMPUERTA RIGHT
+		$display("RIGHT");
+		reset = 0;
+		#1;
+		reset = 1;
+		
+		button = 0;
+		#1;
+		button = 1;
+		#10;
+		
+		button = 0;
+		#1;
+		button = 1;
+		#10;
+		
+		button = 0;
+		#1;
+		button = 1;
+		#10;
+		
+		button = 0;
+		#1;
+		button = 1;
+		#10;
+		
+		button = 0;
+		#1;
+		button = 1;
+		#10;
+		
+		button = 0;
+		#1;
+		button = 1;
+		#10;
+		
+		button = 0;
+		#1;
+		button = 1;
+		#10;
+		
+		button = 0;
+		#1;
+		button = 1;
+		#10;
+		
+		button = 0;
+		#1;
+		button = 1;
+		#10;
+		
+		start = 0;
+		#1;
+		start = 1;
+	
+		A_input = 4'b0001;
+		#40;
+
+		A_input = 4'b1111;
+		#40;
+
+		A_input = 4'b0011;
+		#40;
 	 
     end
 

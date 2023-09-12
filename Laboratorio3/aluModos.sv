@@ -16,7 +16,7 @@ module aluModos #(
 
     reg [3:0] modo = 0;   
 	 reg [3:0] digitos;
-	 reg [3:0] resultados[5:0];
+	 reg [3:0] resultados[9:0];
 	 reg [3:0] acarreo = 4'b1111;
 	 reg [3:0] negativo = 4'b1111;
 	 reg [3:0] cero = 4'b1111;
@@ -26,9 +26,14 @@ module aluModos #(
 	 reg [3:0] digitos_temp= 4'b0000;
 	 reg [3:0] flags;
 	 
-	 
+	 initial begin
+		 for (int i = 0; i < 10; i = i + 1) begin
+			  resultados[i] = 4'b0000;
+		 end
+	end
 
     always @(negedge selector or negedge start or negedge reset) begin
+	 #1
 		if (~reset) begin
 			deco <= 2'b00;
 			modo <= 0;
@@ -61,12 +66,41 @@ module aluModos #(
 						acarreo <= 4'b0101;
 					end
 				end
+				
 				6'd1: begin 
 					digitos_temp = resultados[1];
 					if (flags[3]) begin
 						negativo <= 4'b0001;
 					end
 				end
+				
+				6'd5: begin 
+					$display("AND %b", resultados[5]);
+					digitos_temp = resultados[5];
+				end
+				
+				6'd6: begin 
+					$display("OR %b", resultados[6]);
+					digitos_temp = resultados[6];
+				end
+				
+				6'd7: begin 
+					$display("XOR %b", resultados[7]);
+					digitos_temp = resultados[7];
+				end
+				
+				6'd8: begin 
+					$display("LEFT %b", resultados[8]);
+					digitos_temp = resultados[8];
+				end
+				
+				6'd9: begin 
+					$display("RIGHT %b", resultados[9]);
+					digitos_temp = resultados[9];
+				end
+				
+				
+				
 				default: begin
 					digitos_temp = resultados[0]; 
 				end // Apagar displays si el número está fuera de rango
@@ -115,6 +149,31 @@ module aluModos #(
         .resta(resultados[1]),
         .Cout(flags[3])
     );
+	 
+	 CompuertaAND #(n) dutAND (
+		.a(A),
+		.out(resultados[5][0])
+	 );
+	 
+	 CompuertaOR #(n) dutOR (
+		.a(A),
+		.out(resultados[6][0])
+	 );
+	 
+	 CompuertaXOR #(n) dutXOR (
+		.a(A),
+		.out(resultados[7][0])
+	 );
+	 
+	 shiftLeft #(n) dutLeft (
+		.data_in(A),
+		.data_out(resultados[8])
+	 );
+	 
+	 shiftRight #(n) dutRight (
+		.data_in(A),
+		.data_out(resultados[9])
+	 );
 	 
 	 decodificador_modos disp(
 			.mode(deco),
