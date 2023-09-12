@@ -190,6 +190,21 @@ module aluModos #(
 			.g(display1[0])
 			);
 			
+	  decodificador_modos disp2(
+			.mode(2'b00),
+			.A(1), 
+			.B(1), 
+			.C(1), 
+			.D(1), 
+			.a(display2[6]), 
+			.b(display2[5]), 
+			.c(display2[4]), 
+			.d(display2[3]), 
+			.e(display2[2]), 
+			.f(display2[1]), 
+			.g(display2[0])
+			);
+			
 			
 	 decodificador_modos flagDes(
 			.mode(2'b00),

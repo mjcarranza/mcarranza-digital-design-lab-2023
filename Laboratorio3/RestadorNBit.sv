@@ -8,6 +8,7 @@ module RestadorNBit #(
 );
     reg [n:0] carry_out_intermediate=0;
 	 logic flag = 0;
+	 logic stop = 0;
 	 reg [n-1:0] complemento =0;
     
     // Instancias de sumadores de 1 bit
@@ -25,10 +26,10 @@ module RestadorNBit #(
 		assign Cout = carry_out_intermediate[n];
     endgenerate
 	 
-	 always @(Cout) begin
+	 always @(*) begin
 		if (Cout ==1) begin
 			flag= 0;
-			for (int i = 0; i < n; i = i + 1) begin	
+			for (int i = 0; i < n; i = i + 1) begin
 				if (flag) begin 
 					resta[i]= ~complemento[i];
 				end else begin 

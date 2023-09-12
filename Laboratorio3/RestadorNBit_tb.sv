@@ -46,8 +46,61 @@ module RestadorNBit_tb;
         $monitor("%b\t%b\t%b\t%b", A_input, B_input, resta_output, Cout_output);
 
         // Prueba 1
-        A_input = 4'b000;
-        B_input = 4'b000;
+        A_input = 4'b0001;
+        B_input = 4'b0010;
+        #40;
+		  
+		  // Prueba 1
+        A_input = 4'b0001;
+        B_input = 4'b0011;
+        #40;
+		  
+		  // Prueba 1
+        A_input = 4'b0001;
+        B_input = 4'b0100;
+        #40;
+		  
+		  // Prueba 1
+        A_input = 4'b0001;
+        B_input = 4'b0110;
+        #40;
+		  // Prueba 1
+        A_input = 4'b0001;
+        B_input = 4'b0111;
+        #40;
+		  
+		  // Prueba 1
+        A_input = 4'b0010;
+        B_input = 4'b0011;
+        #40;
+		  
+		  // Prueba 1
+        A_input = 4'b0010;
+        B_input = 4'b0100;
+        #40;
+		  
+		  // Prueba 1
+        A_input = 4'b0010;
+        B_input = 4'b0110;
+        #40;
+		  // Prueba 1
+        A_input = 4'b0010;
+        B_input = 4'b0111;
+        #40;
+
+		  
+		  // Prueba 1
+        A_input = 4'b0011;
+        B_input = 4'b0100;
+        #40;
+		  
+		  // Prueba 1
+        A_input = 4'b0011;
+        B_input = 4'b0110;
+        #40;
+		  // Prueba 1
+        A_input = 4'b0011;
+        B_input = 4'b0111;
         #40;
 		  
 		  
