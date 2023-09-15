@@ -1,47 +1,43 @@
-Analysis & Synthesis report for ALU
-Tue Sep 12 01:57:13 2023
-Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
+Analysis & Elaboration report for ALU
+Tue Sep 12 06:50:17 2023
+Quartus Prime Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
 
 
 ---------------------
 ; Table of Contents ;
 ---------------------
   1. Legal Notice
-  2. Analysis & Synthesis Summary
-  3. Analysis & Synthesis Settings
-  4. Parallel Compilation
-  5. Analysis & Synthesis Source Files Read
-  6. Analysis & Synthesis Resource Usage Summary
-  7. Analysis & Synthesis Resource Utilization by Entity
-  8. User-Specified and Inferred Latches
-  9. Registers Removed During Synthesis
- 10. General Register Statistics
- 11. Parameter Settings for User Entity Instance: Top-level Entity: |aluModos
- 12. Parameter Settings for User Entity Instance: SumaNBit:dutSum
- 13. Parameter Settings for User Entity Instance: RestadorNBit:dutRes
- 14. Parameter Settings for User Entity Instance: CompuertaAND:dutAND
- 15. Parameter Settings for User Entity Instance: CompuertaOR:dutOR
- 16. Parameter Settings for User Entity Instance: CompuertaXOR:dutXOR
- 17. Parameter Settings for User Entity Instance: shiftLeft:dutLeft
- 18. Parameter Settings for User Entity Instance: shiftRight:dutRight
- 19. Port Connectivity Checks: "decodificador_modos:flagNeg"
- 20. Port Connectivity Checks: "decodificador_modos:flagAca"
- 21. Port Connectivity Checks: "decodificador_modos:flagCero"
- 22. Port Connectivity Checks: "decodificador_modos:flagDes"
- 23. Port Connectivity Checks: "decodificador_modos:disp2"
- 24. Port Connectivity Checks: "RestadorNBit:dutRes|Restador1Bit:loop_01[0].res"
- 25. Port Connectivity Checks: "SumaNBit:dutSum|Suma1Bit:loop_01[0].sum"
- 26. Post-Synthesis Netlist Statistics for Top Partition
- 27. Elapsed Time Per Partition
- 28. Analysis & Synthesis Messages
- 29. Analysis & Synthesis Suppressed Messages
+  2. Analysis & Elaboration Summary
+  3. Parallel Compilation
+  4. Parameter Settings for User Entity Instance: Top-level Entity: |aluModos
+  5. Parameter Settings for User Entity Instance: SumaNBit:dutSum
+  6. Parameter Settings for User Entity Instance: RestadorNBit:dutRes
+  7. Parameter Settings for User Entity Instance: DivisionNBit:dutDiv
+  8. Parameter Settings for User Entity Instance: DivisionNBit:dutMod
+  9. Parameter Settings for User Entity Instance: CompuertaAND:dutAND
+ 10. Parameter Settings for User Entity Instance: CompuertaOR:dutOR
+ 11. Parameter Settings for User Entity Instance: CompuertaXOR:dutXOR
+ 12. Parameter Settings for User Entity Instance: shiftLeft:dutLeft
+ 13. Parameter Settings for User Entity Instance: shiftRight:dutRight
+ 14. Analysis & Elaboration Settings
+ 15. Port Connectivity Checks: "decodificador_modos:flagNeg"
+ 16. Port Connectivity Checks: "decodificador_modos:flagAca"
+ 17. Port Connectivity Checks: "decodificador_modos:flagCero"
+ 18. Port Connectivity Checks: "decodificador_modos:flagDes"
+ 19. Port Connectivity Checks: "decodificador_modos:disp2"
+ 20. Port Connectivity Checks: "DivisionNBit:dutMod"
+ 21. Port Connectivity Checks: "DivisionNBit:dutDiv"
+ 22. Port Connectivity Checks: "RestadorNBit:dutRes|Restador1Bit:loop_01[0].res"
+ 23. Port Connectivity Checks: "SumaNBit:dutSum|Suma1Bit:loop_01[0].sum"
+ 24. Analysis & Elaboration Messages
+ 25. Analysis & Elaboration Suppressed Messages
 
 
 
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 2020  Intel Corporation. All rights reserved.
+Copyright (C) 2022  Intel Corporation. All rights reserved.
 Your use of Intel Corporation's design tools, logic functions 
 and other software and tools, and any partner logic 
 functions, and any output files from any of the foregoing 
@@ -58,31 +54,142 @@ https://fpgasoftware.intel.com/eula.
 
 
 
-+-------------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                                  ;
-+---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Tue Sep 12 01:57:13 2023       ;
-; Quartus Prime Version           ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
-; Revision Name                   ; ALU                                         ;
-; Top-level Entity Name           ; aluModos                                    ;
-; Family                          ; Cyclone V                                   ;
-; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 1                                           ;
-; Total pins                      ; 53                                          ;
-; Total virtual pins              ; 0                                           ;
-; Total block memory bits         ; 0                                           ;
-; Total DSP Blocks                ; 0                                           ;
-; Total HSSI RX PCSs              ; 0                                           ;
-; Total HSSI PMA RX Deserializers ; 0                                           ;
-; Total HSSI TX PCSs              ; 0                                           ;
-; Total HSSI PMA TX Serializers   ; 0                                           ;
-; Total PLLs                      ; 0                                           ;
-; Total DLLs                      ; 0                                           ;
-+---------------------------------+---------------------------------------------+
++--------------------------------------------------------------------------------+
+; Analysis & Elaboration Summary                                                 ;
++-------------------------------+------------------------------------------------+
+; Analysis & Elaboration Status ; Successful - Tue Sep 12 06:50:17 2023          ;
+; Quartus Prime Version         ; 22.1std.0 Build 915 10/25/2022 SC Lite Edition ;
+; Revision Name                 ; ALU                                            ;
+; Top-level Entity Name         ; aluModos                                       ;
+; Family                        ; Cyclone V                                      ;
+; Logic utilization (in ALMs)   ; N/A until Partition Merge                      ;
+; Total registers               ; N/A until Partition Merge                      ;
+; Total pins                    ; N/A until Partition Merge                      ;
+; Total virtual pins            ; N/A until Partition Merge                      ;
+; Total block memory bits       ; N/A until Partition Merge                      ;
+; Total PLLs                    ; N/A until Partition Merge                      ;
+; Total DLLs                    ; N/A until Partition Merge                      ;
++-------------------------------+------------------------------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 2           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
++----------------------------+-------------+
+
+
++--------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |aluModos ;
++----------------+-------+-------------------------------------------------+
+; Parameter Name ; Value ; Type                                            ;
++----------------+-------+-------------------------------------------------+
+; n              ; 4     ; Signed Integer                                  ;
++----------------+-------+-------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: SumaNBit:dutSum ;
++----------------+-------+-------------------------------------+
+; Parameter Name ; Value ; Type                                ;
++----------------+-------+-------------------------------------+
+; n              ; 4     ; Signed Integer                      ;
++----------------+-------+-------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: RestadorNBit:dutRes ;
++----------------+-------+-----------------------------------------+
+; Parameter Name ; Value ; Type                                    ;
++----------------+-------+-----------------------------------------+
+; n              ; 4     ; Signed Integer                          ;
++----------------+-------+-----------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: DivisionNBit:dutDiv ;
++----------------+-------+-----------------------------------------+
+; Parameter Name ; Value ; Type                                    ;
++----------------+-------+-----------------------------------------+
+; n              ; 4     ; Signed Integer                          ;
++----------------+-------+-----------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: DivisionNBit:dutMod ;
++----------------+-------+-----------------------------------------+
+; Parameter Name ; Value ; Type                                    ;
++----------------+-------+-----------------------------------------+
+; n              ; 4     ; Signed Integer                          ;
++----------------+-------+-----------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: CompuertaAND:dutAND ;
++----------------+-------+-----------------------------------------+
+; Parameter Name ; Value ; Type                                    ;
++----------------+-------+-----------------------------------------+
+; N              ; 4     ; Signed Integer                          ;
++----------------+-------+-----------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: CompuertaOR:dutOR ;
++----------------+-------+---------------------------------------+
+; Parameter Name ; Value ; Type                                  ;
++----------------+-------+---------------------------------------+
+; N              ; 4     ; Signed Integer                        ;
++----------------+-------+---------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: CompuertaXOR:dutXOR ;
++----------------+-------+-----------------------------------------+
+; Parameter Name ; Value ; Type                                    ;
++----------------+-------+-----------------------------------------+
+; N              ; 4     ; Signed Integer                          ;
++----------------+-------+-----------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: shiftLeft:dutLeft ;
++----------------+-------+---------------------------------------+
+; Parameter Name ; Value ; Type                                  ;
++----------------+-------+---------------------------------------+
+; N              ; 4     ; Signed Integer                        ;
++----------------+-------+---------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: shiftRight:dutRight ;
++----------------+-------+-----------------------------------------+
+; Parameter Name ; Value ; Type                                    ;
++----------------+-------+-----------------------------------------+
+; N              ; 4     ; Signed Integer                          ;
++----------------+-------+-----------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
 +---------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Settings                                                                                             ;
+; Analysis & Elaboration Settings                                                                                           ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 ; Option                                                                          ; Setting            ; Default Value      ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
@@ -168,208 +275,6 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 
 
-+------------------------------------------+
-; Parallel Compilation                     ;
-+----------------------------+-------------+
-; Processors                 ; Number      ;
-+----------------------------+-------------+
-; Number detected on machine ; 12          ;
-; Maximum allowed            ; 6           ;
-;                            ;             ;
-; Average used               ; 1.00        ;
-; Maximum used               ; 6           ;
-;                            ;             ;
-; Usage by Processor         ; % Time Used ;
-;     Processor 1            ; 100.0%      ;
-;     Processors 2-6         ;   0.0%      ;
-+----------------------------+-------------+
-
-
-+----------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                   ;
-+----------------------------------+-----------------+------------------------------+------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                               ; Library ;
-+----------------------------------+-----------------+------------------------------+------------------------------------------------------------+---------+
-; shiftRight.sv                    ; yes             ; User SystemVerilog HDL File  ; C:/Users/marti/Desktop/Laboratorio3/shiftRight.sv          ;         ;
-; shiftLeft.sv                     ; yes             ; User SystemVerilog HDL File  ; C:/Users/marti/Desktop/Laboratorio3/shiftLeft.sv           ;         ;
-; CompuertaXOR.sv                  ; yes             ; User SystemVerilog HDL File  ; C:/Users/marti/Desktop/Laboratorio3/CompuertaXOR.sv        ;         ;
-; CompuertaOR.sv                   ; yes             ; User SystemVerilog HDL File  ; C:/Users/marti/Desktop/Laboratorio3/CompuertaOR.sv         ;         ;
-; CompuertaAND.sv                  ; yes             ; User SystemVerilog HDL File  ; C:/Users/marti/Desktop/Laboratorio3/CompuertaAND.sv        ;         ;
-; Suma1Bit.sv                      ; yes             ; User SystemVerilog HDL File  ; C:/Users/marti/Desktop/Laboratorio3/Suma1Bit.sv            ;         ;
-; Restador1Bit.sv                  ; yes             ; User SystemVerilog HDL File  ; C:/Users/marti/Desktop/Laboratorio3/Restador1Bit.sv        ;         ;
-; SumaNBit.sv                      ; yes             ; User SystemVerilog HDL File  ; C:/Users/marti/Desktop/Laboratorio3/SumaNBit.sv            ;         ;
-; RestadorNBit.sv                  ; yes             ; User SystemVerilog HDL File  ; C:/Users/marti/Desktop/Laboratorio3/RestadorNBit.sv        ;         ;
-; aluModos.sv                      ; yes             ; User SystemVerilog HDL File  ; C:/Users/marti/Desktop/Laboratorio3/aluModos.sv            ;         ;
-; decodificador_modos.sv           ; yes             ; User SystemVerilog HDL File  ; C:/Users/marti/Desktop/Laboratorio3/decodificador_modos.sv ;         ;
-+----------------------------------+-----------------+------------------------------+------------------------------------------------------------+---------+
-
-
-+-------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary           ;
-+---------------------------------------------+---------+
-; Resource                                    ; Usage   ;
-+---------------------------------------------+---------+
-; Estimate of Logic utilization (ALMs needed) ; 32      ;
-;                                             ;         ;
-; Combinational ALUT usage for logic          ; 47      ;
-;     -- 7 input functions                    ; 4       ;
-;     -- 6 input functions                    ; 12      ;
-;     -- 5 input functions                    ; 13      ;
-;     -- 4 input functions                    ; 9       ;
-;     -- <=3 input functions                  ; 9       ;
-;                                             ;         ;
-; Dedicated logic registers                   ; 1       ;
-;                                             ;         ;
-; I/O pins                                    ; 53      ;
-;                                             ;         ;
-; Total DSP Blocks                            ; 0       ;
-;                                             ;         ;
-; Maximum fan-out node                        ; modo[0] ;
-; Maximum fan-out                             ; 20      ;
-; Total fan-out                               ; 296     ;
-; Average fan-out                             ; 1.92    ;
-+---------------------------------------------+---------+
-
-
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                           ;
-+-------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------+---------------------+--------------+
-; Compilation Hierarchy Node          ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                       ; Entity Name         ; Library Name ;
-+-------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------+---------------------+--------------+
-; |aluModos                           ; 47 (28)             ; 1 (1)                     ; 0                 ; 0          ; 53   ; 0            ; |aluModos                                                 ; aluModos            ; work         ;
-;    |RestadorNBit:dutRes|            ; 5 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |aluModos|RestadorNBit:dutRes                             ; RestadorNBit        ; work         ;
-;       |Restador1Bit:loop_01[2].res| ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |aluModos|RestadorNBit:dutRes|Restador1Bit:loop_01[2].res ; Restador1Bit        ; work         ;
-;       |Restador1Bit:loop_01[3].res| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |aluModos|RestadorNBit:dutRes|Restador1Bit:loop_01[3].res ; Restador1Bit        ; work         ;
-;    |SumaNBit:dutSum|                ; 4 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |aluModos|SumaNBit:dutSum                                 ; SumaNBit            ; work         ;
-;       |Suma1Bit:loop_01[1].sum|     ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |aluModos|SumaNBit:dutSum|Suma1Bit:loop_01[1].sum         ; Suma1Bit            ; work         ;
-;       |Suma1Bit:loop_01[2].sum|     ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |aluModos|SumaNBit:dutSum|Suma1Bit:loop_01[2].sum         ; Suma1Bit            ; work         ;
-;       |Suma1Bit:loop_01[3].sum|     ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |aluModos|SumaNBit:dutSum|Suma1Bit:loop_01[3].sum         ; Suma1Bit            ; work         ;
-;    |decodificador_modos:disp|       ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |aluModos|decodificador_modos:disp                        ; decodificador_modos ; work         ;
-;    |decodificador_modos:flagNeg|    ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |aluModos|decodificador_modos:flagNeg                     ; decodificador_modos ; work         ;
-+-------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------+---------------------+--------------+
-Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
-
-
-+---------------------------------------------------------------------------------------------------+
-; User-Specified and Inferred Latches                                                               ;
-+----------------------------------------------------+---------------------+------------------------+
-; Latch Name                                         ; Latch Enable Signal ; Free of Timing Hazards ;
-+----------------------------------------------------+---------------------+------------------------+
-; modo[1]                                            ; selector            ; yes                    ;
-; modo[3]                                            ; selector            ; yes                    ;
-; modo[2]                                            ; selector            ; yes                    ;
-; modo[0]                                            ; selector            ; yes                    ;
-; Number of user-specified and inferred latches = 4  ;                     ;                        ;
-+----------------------------------------------------+---------------------+------------------------+
-Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
-
-
-+-------------------------------------------------------------+
-; Registers Removed During Synthesis                          ;
-+---------------------------------------+---------------------+
-; Register name                         ; Reason for Removal  ;
-+---------------------------------------+---------------------+
-; deco[1]                               ; Merged with deco[0] ;
-; flag                                  ; Merged with deco[0] ;
-; Total Number of Removed Registers = 2 ;                     ;
-+---------------------------------------+---------------------+
-
-
-+------------------------------------------------------+
-; General Register Statistics                          ;
-+----------------------------------------------+-------+
-; Statistic                                    ; Value ;
-+----------------------------------------------+-------+
-; Total registers                              ; 1     ;
-; Number of registers using Synchronous Clear  ; 0     ;
-; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 1     ;
-; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 0     ;
-; Number of registers using Preset             ; 0     ;
-+----------------------------------------------+-------+
-
-
-+--------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: Top-level Entity: |aluModos ;
-+----------------+-------+-------------------------------------------------+
-; Parameter Name ; Value ; Type                                            ;
-+----------------+-------+-------------------------------------------------+
-; n              ; 4     ; Signed Integer                                  ;
-+----------------+-------+-------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+--------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: SumaNBit:dutSum ;
-+----------------+-------+-------------------------------------+
-; Parameter Name ; Value ; Type                                ;
-+----------------+-------+-------------------------------------+
-; n              ; 4     ; Signed Integer                      ;
-+----------------+-------+-------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: RestadorNBit:dutRes ;
-+----------------+-------+-----------------------------------------+
-; Parameter Name ; Value ; Type                                    ;
-+----------------+-------+-----------------------------------------+
-; n              ; 4     ; Signed Integer                          ;
-+----------------+-------+-----------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: CompuertaAND:dutAND ;
-+----------------+-------+-----------------------------------------+
-; Parameter Name ; Value ; Type                                    ;
-+----------------+-------+-----------------------------------------+
-; N              ; 4     ; Signed Integer                          ;
-+----------------+-------+-----------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+----------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: CompuertaOR:dutOR ;
-+----------------+-------+---------------------------------------+
-; Parameter Name ; Value ; Type                                  ;
-+----------------+-------+---------------------------------------+
-; N              ; 4     ; Signed Integer                        ;
-+----------------+-------+---------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: CompuertaXOR:dutXOR ;
-+----------------+-------+-----------------------------------------+
-; Parameter Name ; Value ; Type                                    ;
-+----------------+-------+-----------------------------------------+
-; N              ; 4     ; Signed Integer                          ;
-+----------------+-------+-----------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+----------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: shiftLeft:dutLeft ;
-+----------------+-------+---------------------------------------+
-; Parameter Name ; Value ; Type                                  ;
-+----------------+-------+---------------------------------------+
-; N              ; 4     ; Signed Integer                        ;
-+----------------+-------+---------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: shiftRight:dutRight ;
-+----------------+-------+-----------------------------------------+
-; Parameter Name ; Value ; Type                                    ;
-+----------------+-------+-----------------------------------------+
-; N              ; 4     ; Signed Integer                          ;
-+----------------+-------+-----------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
 +---------------------------------------------------------+
 ; Port Connectivity Checks: "decodificador_modos:flagNeg" ;
 +------+-------+----------+-------------------------------+
@@ -434,6 +339,24 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
++-------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "DivisionNBit:dutMod"                                                                                     ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                  ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; i    ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "DivisionNBit:dutDiv"                                                                                     ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                  ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; res  ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+
+
 +-----------------------------------------------------------------------------+
 ; Port Connectivity Checks: "RestadorNBit:dutRes|Restador1Bit:loop_01[0].res" ;
 +------+-------+----------+---------------------------------------------------+
@@ -452,169 +375,104 @@ Note: In order to hide this table in the UI and the text report file, please set
 +------+-------+----------+-------------------------------------------+
 
 
-+-----------------------------------------------------+
-; Post-Synthesis Netlist Statistics for Top Partition ;
-+-----------------------+-----------------------------+
-; Type                  ; Count                       ;
-+-----------------------+-----------------------------+
-; arriav_ff             ; 1                           ;
-;     CLR               ; 1                           ;
-; arriav_lcell_comb     ; 48                          ;
-;     extend            ; 4                           ;
-;         7 data inputs ; 4                           ;
-;     normal            ; 44                          ;
-;         0 data inputs ; 1                           ;
-;         2 data inputs ; 2                           ;
-;         3 data inputs ; 7                           ;
-;         4 data inputs ; 9                           ;
-;         5 data inputs ; 13                          ;
-;         6 data inputs ; 12                          ;
-; boundary_port         ; 53                          ;
-;                       ;                             ;
-; Max LUT depth         ; 6.00                        ;
-; Average LUT depth     ; 4.14                        ;
-+-----------------------+-----------------------------+
-
-
-+-------------------------------+
-; Elapsed Time Per Partition    ;
-+----------------+--------------+
-; Partition Name ; Elapsed Time ;
-+----------------+--------------+
-; Top            ; 00:00:00     ;
-+----------------+--------------+
-
-
-+-------------------------------+
-; Analysis & Synthesis Messages ;
-+-------------------------------+
++---------------------------------+
+; Analysis & Elaboration Messages ;
++---------------------------------+
 Info: *******************************************************************
-Info: Running Quartus Prime Analysis & Synthesis
-    Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Tue Sep 12 01:57:05 2023
-Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ALU -c ALU
+Info: Running Quartus Prime Analysis & Elaboration
+    Info: Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
+    Info: Processing started: Tue Sep 12 06:49:59 2023
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ALU -c ALU --analysis_and_elaboration
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
+Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file shiftright_tb.sv
-    Info (12023): Found entity 1: shiftRight_tb File: C:/Users/marti/Desktop/Laboratorio3/shiftRight_tb.sv Line: 3
+    Info (12023): Found entity 1: shiftRight_tb File: C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3/shiftRight_tb.sv Line: 3
 Info (12021): Found 1 design units, including 1 entities, in source file shiftright.sv
-    Info (12023): Found entity 1: shiftRight File: C:/Users/marti/Desktop/Laboratorio3/shiftRight.sv Line: 3
+    Info (12023): Found entity 1: shiftRight File: C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3/shiftRight.sv Line: 3
 Info (12021): Found 1 design units, including 1 entities, in source file shiftleft_tb.sv
-    Info (12023): Found entity 1: shiftLeft_tb File: C:/Users/marti/Desktop/Laboratorio3/shiftLeft_tb.sv Line: 5
+    Info (12023): Found entity 1: shiftLeft_tb File: C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3/shiftLeft_tb.sv Line: 5
 Info (12021): Found 1 design units, including 1 entities, in source file shiftleft.sv
-    Info (12023): Found entity 1: shiftLeft File: C:/Users/marti/Desktop/Laboratorio3/shiftLeft.sv Line: 3
+    Info (12023): Found entity 1: shiftLeft File: C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3/shiftLeft.sv Line: 3
 Info (12021): Found 1 design units, including 1 entities, in source file registro_tb.sv
-    Info (12023): Found entity 1: Registro_tb File: C:/Users/marti/Desktop/Laboratorio3/Registro_tb.sv Line: 2
+    Info (12023): Found entity 1: Registro_tb File: C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3/Registro_tb.sv Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file registro.sv
-    Info (12023): Found entity 1: Registro File: C:/Users/marti/Desktop/Laboratorio3/Registro.sv Line: 3
+    Info (12023): Found entity 1: Registro File: C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3/Registro.sv Line: 3
 Info (12021): Found 1 design units, including 1 entities, in source file compuertaxor_tb.sv
-    Info (12023): Found entity 1: CompuertaXOR_tb File: C:/Users/marti/Desktop/Laboratorio3/CompuertaXOR_tb.sv Line: 1
+    Info (12023): Found entity 1: CompuertaXOR_tb File: C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3/CompuertaXOR_tb.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file compuertaxor.sv
-    Info (12023): Found entity 1: CompuertaXOR File: C:/Users/marti/Desktop/Laboratorio3/CompuertaXOR.sv Line: 1
+    Info (12023): Found entity 1: CompuertaXOR File: C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3/CompuertaXOR.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file compuertaor_tb.sv
-    Info (12023): Found entity 1: CompuertaOR_tb File: C:/Users/marti/Desktop/Laboratorio3/CompuertaOR_tb.sv Line: 1
+    Info (12023): Found entity 1: CompuertaOR_tb File: C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3/CompuertaOR_tb.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file compuertaor.sv
-    Info (12023): Found entity 1: CompuertaOR File: C:/Users/marti/Desktop/Laboratorio3/CompuertaOR.sv Line: 1
+    Info (12023): Found entity 1: CompuertaOR File: C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3/CompuertaOR.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file compuertaand_tb.sv
-    Info (12023): Found entity 1: CompuertaAND_tb File: C:/Users/marti/Desktop/Laboratorio3/CompuertaAND_tb.sv Line: 1
+    Info (12023): Found entity 1: CompuertaAND_tb File: C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3/CompuertaAND_tb.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file compuertaand.sv
-    Info (12023): Found entity 1: CompuertaAND File: C:/Users/marti/Desktop/Laboratorio3/CompuertaAND.sv Line: 1
+    Info (12023): Found entity 1: CompuertaAND File: C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3/CompuertaAND.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file suma1bit.sv
-    Info (12023): Found entity 1: Suma1Bit File: C:/Users/marti/Desktop/Laboratorio3/Suma1Bit.sv Line: 1
+    Info (12023): Found entity 1: Suma1Bit File: C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3/Suma1Bit.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file suma1bit_tb.sv
-    Info (12023): Found entity 1: Suma1Bit_tb File: C:/Users/marti/Desktop/Laboratorio3/Suma1Bit_tb.sv Line: 1
+    Info (12023): Found entity 1: Suma1Bit_tb File: C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3/Suma1Bit_tb.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file restador1bit.sv
-    Info (12023): Found entity 1: Restador1Bit File: C:/Users/marti/Desktop/Laboratorio3/Restador1Bit.sv Line: 1
+    Info (12023): Found entity 1: Restador1Bit File: C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3/Restador1Bit.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file restador1bit_tb.sv
-    Info (12023): Found entity 1: Restador1Bit_tb File: C:/Users/marti/Desktop/Laboratorio3/Restador1Bit_tb.sv Line: 1
+    Info (12023): Found entity 1: Restador1Bit_tb File: C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3/Restador1Bit_tb.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file sumanbit.sv
-    Info (12023): Found entity 1: SumaNBit File: C:/Users/marti/Desktop/Laboratorio3/SumaNBit.sv Line: 1
+    Info (12023): Found entity 1: SumaNBit File: C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3/SumaNBit.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file sumanbit_tb.sv
-    Info (12023): Found entity 1: SumaNBit_tb File: C:/Users/marti/Desktop/Laboratorio3/SumaNBit_tb.sv Line: 1
+    Info (12023): Found entity 1: SumaNBit_tb File: C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3/SumaNBit_tb.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file restadornbit.sv
-    Info (12023): Found entity 1: RestadorNBit File: C:/Users/marti/Desktop/Laboratorio3/RestadorNBit.sv Line: 1
+    Info (12023): Found entity 1: RestadorNBit File: C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3/RestadorNBit.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file restadornbit_tb.sv
-    Info (12023): Found entity 1: RestadorNBit_tb File: C:/Users/marti/Desktop/Laboratorio3/RestadorNBit_tb.sv Line: 1
+    Info (12023): Found entity 1: RestadorNBit_tb File: C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3/RestadorNBit_tb.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file alumodos.sv
-    Info (12023): Found entity 1: aluModos File: C:/Users/marti/Desktop/Laboratorio3/aluModos.sv Line: 1
+    Info (12023): Found entity 1: aluModos File: C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3/aluModos.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file decodificador.sv
-    Info (12023): Found entity 1: decodificador File: C:/Users/marti/Desktop/Laboratorio3/decodificador.sv Line: 1
+    Info (12023): Found entity 1: decodificador File: C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3/decodificador.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file alumodos_tb.sv
-    Info (12023): Found entity 1: aluModos_tb File: C:/Users/marti/Desktop/Laboratorio3/aluModos_tb.sv Line: 1
+    Info (12023): Found entity 1: aluModos_tb File: C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3/aluModos_tb.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file decodificador_modos.sv
-    Info (12023): Found entity 1: decodificador_modos File: C:/Users/marti/Desktop/Laboratorio3/decodificador_modos.sv Line: 1
+    Info (12023): Found entity 1: decodificador_modos File: C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3/decodificador_modos.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file mulnbit.sv
-    Info (12023): Found entity 1: MulNBit File: C:/Users/marti/Desktop/Laboratorio3/MulNBit.sv Line: 1
+    Info (12023): Found entity 1: MulNBit File: C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3/MulNBit.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file mulnbit_tb.sv
-    Info (12023): Found entity 1: MulNBit_tb File: C:/Users/marti/Desktop/Laboratorio3/MulNBit_tb.sv Line: 1
+    Info (12023): Found entity 1: MulNBit_tb File: C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3/MulNBit_tb.sv Line: 1
 Info (12127): Elaborating entity "aluModos" for the top level hierarchy
-Warning (10230): Verilog HDL assignment warning at aluModos.sv(43): truncated value with size 32 to match size of target (4) File: C:/Users/marti/Desktop/Laboratorio3/aluModos.sv Line: 43
-Warning (10240): Verilog HDL Always Construct warning at aluModos.sv(35): inferring latch(es) for variable "modo", which holds its previous value in one or more paths through the always construct File: C:/Users/marti/Desktop/Laboratorio3/aluModos.sv Line: 35
-Warning (10240): Verilog HDL Always Construct warning at aluModos.sv(56): inferring latch(es) for variable "digitos", which holds its previous value in one or more paths through the always construct File: C:/Users/marti/Desktop/Laboratorio3/aluModos.sv Line: 56
-Info (10041): Inferred latch for "modo[0]" at aluModos.sv(35) File: C:/Users/marti/Desktop/Laboratorio3/aluModos.sv Line: 35
-Info (10041): Inferred latch for "modo[1]" at aluModos.sv(35) File: C:/Users/marti/Desktop/Laboratorio3/aluModos.sv Line: 35
-Info (10041): Inferred latch for "modo[2]" at aluModos.sv(35) File: C:/Users/marti/Desktop/Laboratorio3/aluModos.sv Line: 35
-Info (10041): Inferred latch for "modo[3]" at aluModos.sv(35) File: C:/Users/marti/Desktop/Laboratorio3/aluModos.sv Line: 35
-Info (12128): Elaborating entity "SumaNBit" for hierarchy "SumaNBit:dutSum" File: C:/Users/marti/Desktop/Laboratorio3/aluModos.sv Line: 141
-Info (12128): Elaborating entity "Suma1Bit" for hierarchy "SumaNBit:dutSum|Suma1Bit:loop_01[0].sum" File: C:/Users/marti/Desktop/Laboratorio3/SumaNBit.sv Line: 21
-Info (12128): Elaborating entity "RestadorNBit" for hierarchy "RestadorNBit:dutRes" File: C:/Users/marti/Desktop/Laboratorio3/aluModos.sv Line: 151
-Warning (10036): Verilog HDL or VHDL warning at RestadorNBit.sv(11): object "stop" assigned a value but never read File: C:/Users/marti/Desktop/Laboratorio3/RestadorNBit.sv Line: 11
-Warning (10240): Verilog HDL Always Construct warning at RestadorNBit.sv(30): inferring latch(es) for variable "flag", which holds its previous value in one or more paths through the always construct File: C:/Users/marti/Desktop/Laboratorio3/RestadorNBit.sv Line: 30
-Info (12128): Elaborating entity "Restador1Bit" for hierarchy "RestadorNBit:dutRes|Restador1Bit:loop_01[0].res" File: C:/Users/marti/Desktop/Laboratorio3/RestadorNBit.sv Line: 24
-Info (12128): Elaborating entity "CompuertaAND" for hierarchy "CompuertaAND:dutAND" File: C:/Users/marti/Desktop/Laboratorio3/aluModos.sv Line: 157
-Info (12128): Elaborating entity "CompuertaOR" for hierarchy "CompuertaOR:dutOR" File: C:/Users/marti/Desktop/Laboratorio3/aluModos.sv Line: 163
-Info (12128): Elaborating entity "CompuertaXOR" for hierarchy "CompuertaXOR:dutXOR" File: C:/Users/marti/Desktop/Laboratorio3/aluModos.sv Line: 169
-Info (12128): Elaborating entity "shiftLeft" for hierarchy "shiftLeft:dutLeft" File: C:/Users/marti/Desktop/Laboratorio3/aluModos.sv Line: 174
-Info (12128): Elaborating entity "shiftRight" for hierarchy "shiftRight:dutRight" File: C:/Users/marti/Desktop/Laboratorio3/aluModos.sv Line: 179
-Info (12128): Elaborating entity "decodificador_modos" for hierarchy "decodificador_modos:disp" File: C:/Users/marti/Desktop/Laboratorio3/aluModos.sv Line: 194
-Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
-Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "display2[0]" is stuck at VCC File: C:/Users/marti/Desktop/Laboratorio3/aluModos.sv Line: 10
-    Warning (13410): Pin "display2[1]" is stuck at VCC File: C:/Users/marti/Desktop/Laboratorio3/aluModos.sv Line: 10
-    Warning (13410): Pin "display2[2]" is stuck at VCC File: C:/Users/marti/Desktop/Laboratorio3/aluModos.sv Line: 10
-    Warning (13410): Pin "display2[3]" is stuck at VCC File: C:/Users/marti/Desktop/Laboratorio3/aluModos.sv Line: 10
-    Warning (13410): Pin "display2[4]" is stuck at VCC File: C:/Users/marti/Desktop/Laboratorio3/aluModos.sv Line: 10
-    Warning (13410): Pin "display2[5]" is stuck at VCC File: C:/Users/marti/Desktop/Laboratorio3/aluModos.sv Line: 10
-    Warning (13410): Pin "display2[6]" is stuck at VCC File: C:/Users/marti/Desktop/Laboratorio3/aluModos.sv Line: 10
-    Warning (13410): Pin "display3[1]" is stuck at VCC File: C:/Users/marti/Desktop/Laboratorio3/aluModos.sv Line: 11
-    Warning (13410): Pin "display3[2]" is stuck at VCC File: C:/Users/marti/Desktop/Laboratorio3/aluModos.sv Line: 11
-    Warning (13410): Pin "display3[3]" is stuck at VCC File: C:/Users/marti/Desktop/Laboratorio3/aluModos.sv Line: 11
-    Warning (13410): Pin "display3[4]" is stuck at VCC File: C:/Users/marti/Desktop/Laboratorio3/aluModos.sv Line: 11
-    Warning (13410): Pin "display3[5]" is stuck at VCC File: C:/Users/marti/Desktop/Laboratorio3/aluModos.sv Line: 11
-    Warning (13410): Pin "display3[6]" is stuck at VCC File: C:/Users/marti/Desktop/Laboratorio3/aluModos.sv Line: 11
-    Warning (13410): Pin "display4[3]" is stuck at VCC File: C:/Users/marti/Desktop/Laboratorio3/aluModos.sv Line: 12
-    Warning (13410): Pin "display5[0]" is stuck at VCC File: C:/Users/marti/Desktop/Laboratorio3/aluModos.sv Line: 13
-    Warning (13410): Pin "display5[1]" is stuck at VCC File: C:/Users/marti/Desktop/Laboratorio3/aluModos.sv Line: 13
-    Warning (13410): Pin "display5[2]" is stuck at VCC File: C:/Users/marti/Desktop/Laboratorio3/aluModos.sv Line: 13
-    Warning (13410): Pin "display5[3]" is stuck at VCC File: C:/Users/marti/Desktop/Laboratorio3/aluModos.sv Line: 13
-    Warning (13410): Pin "display5[4]" is stuck at VCC File: C:/Users/marti/Desktop/Laboratorio3/aluModos.sv Line: 13
-    Warning (13410): Pin "display5[5]" is stuck at VCC File: C:/Users/marti/Desktop/Laboratorio3/aluModos.sv Line: 13
-    Warning (13410): Pin "display5[6]" is stuck at VCC File: C:/Users/marti/Desktop/Laboratorio3/aluModos.sv Line: 13
-    Warning (13410): Pin "display6[0]" is stuck at VCC File: C:/Users/marti/Desktop/Laboratorio3/aluModos.sv Line: 15
-    Warning (13410): Pin "display6[1]" is stuck at VCC File: C:/Users/marti/Desktop/Laboratorio3/aluModos.sv Line: 15
-    Warning (13410): Pin "display6[2]" is stuck at VCC File: C:/Users/marti/Desktop/Laboratorio3/aluModos.sv Line: 15
-    Warning (13410): Pin "display6[3]" is stuck at VCC File: C:/Users/marti/Desktop/Laboratorio3/aluModos.sv Line: 15
-    Warning (13410): Pin "display6[4]" is stuck at VCC File: C:/Users/marti/Desktop/Laboratorio3/aluModos.sv Line: 15
-    Warning (13410): Pin "display6[5]" is stuck at VCC File: C:/Users/marti/Desktop/Laboratorio3/aluModos.sv Line: 15
-    Warning (13410): Pin "display6[6]" is stuck at VCC File: C:/Users/marti/Desktop/Laboratorio3/aluModos.sv Line: 15
-Info (286030): Timing-Driven Synthesis is running
-Info (144001): Generated suppressed messages file C:/Users/marti/Desktop/Laboratorio3/output_files/ALU.map.smsg
-Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
-    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 100 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 11 input pins
-    Info (21059): Implemented 42 output pins
-    Info (21061): Implemented 47 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 36 warnings
-    Info: Peak virtual memory: 4843 megabytes
-    Info: Processing ended: Tue Sep 12 01:57:13 2023
-    Info: Elapsed time: 00:00:08
-    Info: Total CPU time (on all processors): 00:00:17
+Warning (10230): Verilog HDL assignment warning at aluModos.sv(43): truncated value with size 32 to match size of target (4) File: C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3/aluModos.sv Line: 43
+Warning (10240): Verilog HDL Always Construct warning at aluModos.sv(35): inferring latch(es) for variable "modo", which holds its previous value in one or more paths through the always construct File: C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3/aluModos.sv Line: 35
+Warning (10240): Verilog HDL Always Construct warning at aluModos.sv(56): inferring latch(es) for variable "digitos", which holds its previous value in one or more paths through the always construct File: C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3/aluModos.sv Line: 56
+Info (10041): Inferred latch for "modo[0]" at aluModos.sv(35) File: C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3/aluModos.sv Line: 35
+Info (10041): Inferred latch for "modo[1]" at aluModos.sv(35) File: C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3/aluModos.sv Line: 35
+Info (10041): Inferred latch for "modo[2]" at aluModos.sv(35) File: C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3/aluModos.sv Line: 35
+Info (10041): Inferred latch for "modo[3]" at aluModos.sv(35) File: C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3/aluModos.sv Line: 35
+Info (12128): Elaborating entity "SumaNBit" for hierarchy "SumaNBit:dutSum" File: C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3/aluModos.sv Line: 149
+Info (12128): Elaborating entity "Suma1Bit" for hierarchy "SumaNBit:dutSum|Suma1Bit:loop_01[0].sum" File: C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3/SumaNBit.sv Line: 21
+Info (12128): Elaborating entity "RestadorNBit" for hierarchy "RestadorNBit:dutRes" File: C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3/aluModos.sv Line: 159
+Warning (10036): Verilog HDL or VHDL warning at RestadorNBit.sv(11): object "stop" assigned a value but never read File: C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3/RestadorNBit.sv Line: 11
+Warning (10240): Verilog HDL Always Construct warning at RestadorNBit.sv(30): inferring latch(es) for variable "flag", which holds its previous value in one or more paths through the always construct File: C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3/RestadorNBit.sv Line: 30
+Info (12128): Elaborating entity "Restador1Bit" for hierarchy "RestadorNBit:dutRes|Restador1Bit:loop_01[0].res" File: C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3/RestadorNBit.sv Line: 24
+Warning (12125): Using design file divisionnbit.sv, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: DivisionNBit File: C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3/divisionnbit.sv Line: 1
+Info (12128): Elaborating entity "DivisionNBit" for hierarchy "DivisionNBit:dutDiv" File: C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3/aluModos.sv Line: 167
+Warning (10230): Verilog HDL assignment warning at DivisionNBit.sv(21): truncated value with size 33 to match size of target (4) File: C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3/DivisionNBit.sv Line: 21
+Info (12128): Elaborating entity "CompuertaAND" for hierarchy "CompuertaAND:dutAND" File: C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3/aluModos.sv Line: 181
+Info (12128): Elaborating entity "CompuertaOR" for hierarchy "CompuertaOR:dutOR" File: C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3/aluModos.sv Line: 187
+Info (12128): Elaborating entity "CompuertaXOR" for hierarchy "CompuertaXOR:dutXOR" File: C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3/aluModos.sv Line: 193
+Info (12128): Elaborating entity "shiftLeft" for hierarchy "shiftLeft:dutLeft" File: C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3/aluModos.sv Line: 198
+Info (12128): Elaborating entity "shiftRight" for hierarchy "shiftRight:dutRight" File: C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3/aluModos.sv Line: 203
+Info (12128): Elaborating entity "decodificador_modos" for hierarchy "decodificador_modos:disp" File: C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3/aluModos.sv Line: 218
+Warning (12241): 3 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Info (144001): Generated suppressed messages file C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3/output_files/ALU.map.smsg
+Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 9 warnings
+    Info: Peak virtual memory: 4780 megabytes
+    Info: Processing ended: Tue Sep 12 06:50:17 2023
+    Info: Elapsed time: 00:00:18
+    Info: Total CPU time (on all processors): 00:00:36
 
 
-+------------------------------------------+
-; Analysis & Synthesis Suppressed Messages ;
-+------------------------------------------+
-The suppressed messages can be found in C:/Users/marti/Desktop/Laboratorio3/output_files/ALU.map.smsg.
++--------------------------------------------+
+; Analysis & Elaboration Suppressed Messages ;
++--------------------------------------------+
+The suppressed messages can be found in C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3/output_files/ALU.map.smsg.
 
 

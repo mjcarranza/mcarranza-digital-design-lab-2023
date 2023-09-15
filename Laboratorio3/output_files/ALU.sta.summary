@@ -3,99 +3,99 @@ Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1100mV 85C Model Setup 'start'
-Slack : -1.990
-TNS   : -1.990
+Slack : -2.028
+TNS   : -2.028
 
 Type  : Slow 1100mV 85C Model Setup 'selector'
-Slack : -1.895
-TNS   : -6.975
+Slack : -1.998
+TNS   : -7.000
 
 Type  : Slow 1100mV 85C Model Hold 'selector'
-Slack : 0.966
+Slack : 0.561
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Hold 'start'
-Slack : 1.014
+Slack : 0.699
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'start'
 Slack : -0.394
-TNS   : -0.788
+TNS   : -0.602
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'selector'
-Slack : 0.131
+Slack : 0.089
 TNS   : 0.000
 
-Type  : Slow 1100mV 0C Model Setup 'start'
-Slack : -1.981
-TNS   : -1.981
-
 Type  : Slow 1100mV 0C Model Setup 'selector'
-Slack : -1.879
-TNS   : -6.987
+Slack : -1.987
+TNS   : -7.162
+
+Type  : Slow 1100mV 0C Model Setup 'start'
+Slack : -1.909
+TNS   : -1.909
 
 Type  : Slow 1100mV 0C Model Hold 'selector'
-Slack : 0.908
+Slack : 0.543
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Hold 'start'
-Slack : 1.085
+Slack : 0.670
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'start'
 Slack : -0.394
-TNS   : -0.715
+TNS   : -0.659
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'selector'
-Slack : 0.169
+Slack : 0.105
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Setup 'start'
-Slack : -0.995
-TNS   : -0.995
+Slack : -1.037
+TNS   : -1.037
 
 Type  : Fast 1100mV 85C Model Setup 'selector'
-Slack : -0.655
-TNS   : -2.213
+Slack : -0.717
+TNS   : -2.040
 
 Type  : Fast 1100mV 85C Model Hold 'selector'
-Slack : 0.486
+Slack : 0.322
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Hold 'start'
-Slack : 0.504
+Slack : 0.469
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'start'
-Slack : -0.337
-TNS   : -0.352
+Slack : -0.297
+TNS   : -0.297
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'selector'
-Slack : -0.038
-TNS   : -0.076
+Slack : -0.091
+TNS   : -0.580
 
 Type  : Fast 1100mV 0C Model Setup 'start'
-Slack : -0.841
-TNS   : -0.841
+Slack : -0.864
+TNS   : -0.864
 
 Type  : Fast 1100mV 0C Model Setup 'selector'
-Slack : -0.531
-TNS   : -1.761
-
-Type  : Fast 1100mV 0C Model Hold 'start'
-Slack : 0.412
-TNS   : 0.000
+Slack : -0.587
+TNS   : -1.707
 
 Type  : Fast 1100mV 0C Model Hold 'selector'
-Slack : 0.462
+Slack : 0.291
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'start'
+Slack : 0.398
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'start'
-Slack : -0.363
-TNS   : -0.387
+Slack : -0.318
+TNS   : -0.318
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'selector'
-Slack : -0.038
-TNS   : -0.065
+Slack : -0.073
+TNS   : -0.490
 
 ------------------------------------------------------------
