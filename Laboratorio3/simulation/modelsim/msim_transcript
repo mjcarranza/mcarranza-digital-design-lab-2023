@@ -13,7 +13,7 @@
 # Modifying modelsim.ini
 # vlog -vlog01compat -work altera_ver {c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/altera_primitives.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 06:55:03 on Sep 12,2023
+# Start time: 21:48:35 on Sep 14,2023
 # vlog -reportprogress 300 -vlog01compat -work altera_ver c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/altera_primitives.v 
 # -- Compiling module global
 # -- Compiling module carry
@@ -95,7 +95,7 @@
 # 	alt_iobuf_diff
 # 	alt_bidir_diff
 # 	alt_bidir_buf
-# End time: 06:55:05 on Sep 12,2023, Elapsed time: 0:00:02
+# End time: 21:48:36 on Sep 14,2023, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # 
 # vlib verilog_libs/lpm_ver
@@ -106,7 +106,7 @@
 # Modifying modelsim.ini
 # vlog -vlog01compat -work lpm_ver {c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/220model.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 06:55:05 on Sep 12,2023
+# Start time: 21:48:37 on Sep 14,2023
 # vlog -reportprogress 300 -vlog01compat -work lpm_ver c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/220model.v 
 # -- Compiling module LPM_MEMORY_INITIALIZATION
 # -- Compiling module LPM_HINT_EVALUATION
@@ -170,7 +170,7 @@
 # 	lpm_inpad
 # 	lpm_outpad
 # 	lpm_bipad
-# End time: 06:55:06 on Sep 12,2023, Elapsed time: 0:00:01
+# End time: 21:48:37 on Sep 14,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vlib verilog_libs/sgate_ver
@@ -181,7 +181,7 @@
 # Modifying modelsim.ini
 # vlog -vlog01compat -work sgate_ver {c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/sgate.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 06:55:07 on Sep 12,2023
+# Start time: 21:48:37 on Sep 14,2023
 # vlog -reportprogress 300 -vlog01compat -work sgate_ver c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/sgate.v 
 # -- Compiling module oper_add
 # -- Compiling module oper_addsub
@@ -223,7 +223,7 @@
 # 	oper_decoder
 # 	oper_bus_mux
 # 	oper_latch
-# End time: 06:55:07 on Sep 12,2023, Elapsed time: 0:00:00
+# End time: 21:48:37 on Sep 14,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vlib verilog_libs/altera_mf_ver
@@ -234,7 +234,7 @@
 # Modifying modelsim.ini
 # vlog -vlog01compat -work altera_mf_ver {c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/altera_mf.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 06:55:07 on Sep 12,2023
+# Start time: 21:48:38 on Sep 14,2023
 # vlog -reportprogress 300 -vlog01compat -work altera_mf_ver c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/altera_mf.v 
 # -- Compiling module lcell
 # -- Compiling module ALTERA_MF_MEMORY_INITIALIZATION
@@ -364,7 +364,7 @@
 # 	alt_fault_injection
 # 	sld_virtual_jtag_basic
 # 	altsource_probe
-# End time: 06:55:09 on Sep 12,2023, Elapsed time: 0:00:02
+# End time: 21:48:40 on Sep 14,2023, Elapsed time: 0:00:02
 # Errors: 0, Warnings: 0
 # 
 # vlib verilog_libs/altera_lnsim_ver
@@ -375,7 +375,7 @@
 # Modifying modelsim.ini
 # vlog -sv -work altera_lnsim_ver {c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/altera_lnsim.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 06:55:10 on Sep 12,2023
+# Start time: 21:48:40 on Sep 14,2023
 # vlog -reportprogress 300 -sv -work altera_lnsim_ver c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/altera_lnsim.sv 
 # -- Compiling package altera_lnsim_functions
 # -- Compiling package altera_generic_pll_functions
@@ -458,7 +458,7 @@
 # 	altera_iopll
 # 	fourteennm_altera_iopll
 # 	fourteennm_simple_iopll
-# End time: 06:55:11 on Sep 12,2023, Elapsed time: 0:00:01
+# End time: 21:48:41 on Sep 14,2023, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # 
 # vlib verilog_libs/cyclonev_ver
@@ -469,7 +469,7 @@
 # Modifying modelsim.ini
 # vlog -vlog01compat -work cyclonev_ver {c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/mentor/cyclonev_atoms_ncrypt.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 06:55:11 on Sep 12,2023
+# Start time: 21:48:42 on Sep 14,2023
 # vlog -reportprogress 300 -vlog01compat -work cyclonev_ver c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/mentor/cyclonev_atoms_ncrypt.v 
 # ** Warning: (vlog-2083) <protected>(<protected>): Carriage return (0x0D) is not followed by a newline (0x0A).
 # ** Warning: (vlog-2083) <protected>(<protected>): Carriage return (0x0D) is not followed by a newline (0x0A).
@@ -483,19 +483,19 @@
 # ** Warning: (vlog-2083) <protected>(<protected>): Carriage return (0x0D) is not followed by a newline (0x0A).
 # 
 # Top level modules:
-# End time: 06:55:15 on Sep 12,2023, Elapsed time: 0:00:04
+# End time: 21:48:45 on Sep 14,2023, Elapsed time: 0:00:03
 # Errors: 0, Warnings: 10
 # vlog -vlog01compat -work cyclonev_ver {c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/mentor/cyclonev_hmi_atoms_ncrypt.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 06:55:15 on Sep 12,2023
+# Start time: 21:48:45 on Sep 14,2023
 # vlog -reportprogress 300 -vlog01compat -work cyclonev_ver c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/mentor/cyclonev_hmi_atoms_ncrypt.v 
 # 
 # Top level modules:
-# End time: 06:55:19 on Sep 12,2023, Elapsed time: 0:00:04
+# End time: 21:48:47 on Sep 14,2023, Elapsed time: 0:00:02
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work cyclonev_ver {c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/cyclonev_atoms.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 06:55:19 on Sep 12,2023
+# Start time: 21:48:47 on Sep 14,2023
 # vlog -reportprogress 300 -vlog01compat -work cyclonev_ver c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/cyclonev_atoms.v 
 # -- Compiling UDP CYCLONEV_PRIM_DFFE
 # -- Compiling UDP CYCLONEV_PRIM_DFFEAS
@@ -635,7 +635,7 @@
 # 	cyclonev_mem_phy
 # 	cyclonev_oscillator
 # 	cyclonev_hps_interface_fpga2sdram
-# End time: 06:55:22 on Sep 12,2023, Elapsed time: 0:00:03
+# End time: 21:48:48 on Sep 14,2023, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # 
 # vlib verilog_libs/cyclonev_hssi_ver
@@ -646,15 +646,15 @@
 # Modifying modelsim.ini
 # vlog -vlog01compat -work cyclonev_hssi_ver {c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/mentor/cyclonev_hssi_atoms_ncrypt.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 06:55:23 on Sep 12,2023
+# Start time: 21:48:48 on Sep 14,2023
 # vlog -reportprogress 300 -vlog01compat -work cyclonev_hssi_ver c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/mentor/cyclonev_hssi_atoms_ncrypt.v 
 # 
 # Top level modules:
-# End time: 06:55:26 on Sep 12,2023, Elapsed time: 0:00:03
+# End time: 21:48:51 on Sep 14,2023, Elapsed time: 0:00:03
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work cyclonev_hssi_ver {c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/cyclonev_hssi_atoms.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 06:55:26 on Sep 12,2023
+# Start time: 21:48:51 on Sep 14,2023
 # vlog -reportprogress 300 -vlog01compat -work cyclonev_hssi_ver c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/cyclonev_hssi_atoms.v 
 # -- Compiling module cyclonev_hssi_8g_pcs_aggregate
 # -- Compiling module cyclonev_hssi_8g_rx_pcs
@@ -754,7 +754,7 @@
 # 	arriav_hssi_avmm_interface
 # 	arriav_hssi_pma_hi_pmaif
 # 	arriav_hssi_pma_hi_xcvrif
-# End time: 06:55:27 on Sep 12,2023, Elapsed time: 0:00:01
+# End time: 21:48:51 on Sep 14,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vlib verilog_libs/cyclonev_pcie_hip_ver
@@ -765,7 +765,7 @@
 # Modifying modelsim.ini
 # vlog -vlog01compat -work cyclonev_pcie_hip_ver {c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/mentor/cyclonev_pcie_hip_atoms_ncrypt.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 06:55:28 on Sep 12,2023
+# Start time: 21:48:52 on Sep 14,2023
 # vlog -reportprogress 300 -vlog01compat -work cyclonev_pcie_hip_ver c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/mentor/cyclonev_pcie_hip_atoms_ncrypt.v 
 # ** Warning: (vlog-2083) <protected>(<protected>): Carriage return (0x0D) is not followed by a newline (0x0A).
 # ** Warning: (vlog-2083) <protected>(<protected>): Carriage return (0x0D) is not followed by a newline (0x0A).
@@ -775,18 +775,18 @@
 # ** Warning: (vlog-2083) <protected>(<protected>): Carriage return (0x0D) is not followed by a newline (0x0A).
 # 
 # Top level modules:
-# End time: 06:55:32 on Sep 12,2023, Elapsed time: 0:00:04
+# End time: 21:48:55 on Sep 14,2023, Elapsed time: 0:00:03
 # Errors: 0, Warnings: 6
 # vlog -vlog01compat -work cyclonev_pcie_hip_ver {c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/cyclonev_pcie_hip_atoms.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 06:55:32 on Sep 12,2023
+# Start time: 21:48:55 on Sep 14,2023
 # vlog -reportprogress 300 -vlog01compat -work cyclonev_pcie_hip_ver c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/cyclonev_pcie_hip_atoms.v 
 # -- Compiling module cyclonev_hd_altpe2_hip_top
 # -- Compiling module arriav_hd_altpe2_hip_top
 # 
 # Top level modules:
 # 	cyclonev_hd_altpe2_hip_top
-# End time: 06:55:32 on Sep 12,2023, Elapsed time: 0:00:00
+# End time: 21:48:55 on Sep 14,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # if {[file exists rtl_work]} {
@@ -798,343 +798,49 @@
 # vmap work rtl_work 
 # Modifying modelsim.ini
 # 
-# vlog -sv -work work +incdir+C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3 {C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3/shiftRight.sv}
+# vlog -sv -work work +incdir+C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3 {C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3/MulNBit.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 06:55:33 on Sep 12,2023
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3" C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3/shiftRight.sv 
-# -- Compiling module shiftRight
+# Start time: 21:48:56 on Sep 14,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3" C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3/MulNBit.sv 
+# -- Compiling module MulNBit
 # 
 # Top level modules:
-# 	shiftRight
-# End time: 06:55:33 on Sep 12,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3 {C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3/shiftLeft.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 06:55:33 on Sep 12,2023
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3" C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3/shiftLeft.sv 
-# -- Compiling module shiftLeft
-# 
-# Top level modules:
-# 	shiftLeft
-# End time: 06:55:33 on Sep 12,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3 {C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3/CompuertaXOR.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 06:55:33 on Sep 12,2023
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3" C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3/CompuertaXOR.sv 
-# -- Compiling module CompuertaXOR
-# 
-# Top level modules:
-# 	CompuertaXOR
-# End time: 06:55:33 on Sep 12,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3 {C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3/CompuertaOR.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 06:55:33 on Sep 12,2023
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3" C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3/CompuertaOR.sv 
-# -- Compiling module CompuertaOR
-# 
-# Top level modules:
-# 	CompuertaOR
-# End time: 06:55:33 on Sep 12,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3 {C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3/CompuertaAND.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 06:55:34 on Sep 12,2023
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3" C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3/CompuertaAND.sv 
-# -- Compiling module CompuertaAND
-# 
-# Top level modules:
-# 	CompuertaAND
-# End time: 06:55:34 on Sep 12,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3 {C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3/Suma1Bit.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 06:55:34 on Sep 12,2023
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3" C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3/Suma1Bit.sv 
-# -- Compiling module Suma1Bit
-# 
-# Top level modules:
-# 	Suma1Bit
-# End time: 06:55:34 on Sep 12,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3 {C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3/Restador1Bit.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 06:55:34 on Sep 12,2023
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3" C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3/Restador1Bit.sv 
-# -- Compiling module Restador1Bit
-# 
-# Top level modules:
-# 	Restador1Bit
-# End time: 06:55:34 on Sep 12,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3 {C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3/SumaNBit.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 06:55:34 on Sep 12,2023
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3" C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3/SumaNBit.sv 
-# -- Compiling module SumaNBit
-# 
-# Top level modules:
-# 	SumaNBit
-# End time: 06:55:34 on Sep 12,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3 {C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3/RestadorNBit.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 06:55:34 on Sep 12,2023
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3" C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3/RestadorNBit.sv 
-# -- Compiling module RestadorNBit
-# 
-# Top level modules:
-# 	RestadorNBit
-# End time: 06:55:35 on Sep 12,2023, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3 {C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3/aluModos.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 06:55:35 on Sep 12,2023
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3" C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3/aluModos.sv 
-# -- Compiling module aluModos
-# ** Warning: C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3/aluModos.sv(118): (vlog-2182) 'digitos' might be read before written in always_comb or always @* block.
-# 
-# Top level modules:
-# 	aluModos
-# End time: 06:55:35 on Sep 12,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 1
-# vlog -sv -work work +incdir+C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3 {C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3/decodificador_modos.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 06:55:35 on Sep 12,2023
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3" C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3/decodificador_modos.sv 
-# -- Compiling module decodificador_modos
-# 
-# Top level modules:
-# 	decodificador_modos
-# End time: 06:55:35 on Sep 12,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3 {C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3/divisionnbit.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 06:55:35 on Sep 12,2023
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3" C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3/divisionnbit.sv 
-# -- Compiling module DivisionNBit
-# 
-# Top level modules:
-# 	DivisionNBit
-# End time: 06:55:35 on Sep 12,2023, Elapsed time: 0:00:00
+# 	MulNBit
+# End time: 21:48:56 on Sep 14,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
-# vlog -sv -work work +incdir+C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3 {C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3/aluModos_tb.sv}
+# vlog -sv -work work +incdir+C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3 {C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3/MulNBit_tb.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 06:55:35 on Sep 12,2023
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3" C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3/aluModos_tb.sv 
-# -- Compiling module aluModos_tb
+# Start time: 21:48:56 on Sep 14,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3" C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3/MulNBit_tb.sv 
+# -- Compiling module MulNBit_tb
 # 
 # Top level modules:
-# 	aluModos_tb
-# End time: 06:55:35 on Sep 12,2023, Elapsed time: 0:00:00
+# 	MulNBit_tb
+# End time: 21:48:56 on Sep 14,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
-# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  aluModos_tb
-# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" aluModos_tb 
-# Start time: 06:55:35 on Sep 12,2023
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  MulNBit_tb
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" MulNBit_tb 
+# Start time: 21:48:56 on Sep 14,2023
 # Loading sv_std.std
-# Loading work.aluModos_tb
-# Loading work.aluModos
-# Loading work.SumaNBit
-# Loading work.RestadorNBit
-# Loading work.DivisionNBit
-# Loading work.CompuertaAND
-# Loading work.CompuertaOR
-# Loading work.CompuertaXOR
-# Loading work.shiftLeft
-# Loading work.shiftRight
-# Loading work.decodificador_modos
-# Loading work.Suma1Bit
-# Loading work.Restador1Bit
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'dutDiv'.  Expected 4, found 3.
-#    Time: 0 ps  Iteration: 0  Instance: /aluModos_tb/dut/dutDiv File: C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3/aluModos.sv Line: 163
-# ** Warning: (vsim-3722) C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3/aluModos.sv(163): [TFMPC] - Missing connection for port 'res'.
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'dutMod'.  Expected 4, found 3.
-#    Time: 0 ps  Iteration: 0  Instance: /aluModos_tb/dut/dutMod File: C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3/aluModos.sv Line: 171
-# ** Warning: (vsim-3722) C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3/aluModos.sv(171): [TFMPC] - Missing connection for port 'i'.
-# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'A'. The port definition is at: C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3/decodificador_modos.sv(3).
-#    Time: 0 ps  Iteration: 0  Instance: /aluModos_tb/dut/disp2 File: C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3/aluModos.sv Line: 220
-# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'B'. The port definition is at: C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3/decodificador_modos.sv(3).
-#    Time: 0 ps  Iteration: 0  Instance: /aluModos_tb/dut/disp2 File: C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3/aluModos.sv Line: 220
-# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'C'. The port definition is at: C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3/decodificador_modos.sv(3).
-#    Time: 0 ps  Iteration: 0  Instance: /aluModos_tb/dut/disp2 File: C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3/aluModos.sv Line: 220
-# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'D'. The port definition is at: C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3/decodificador_modos.sv(3).
-#    Time: 0 ps  Iteration: 0  Instance: /aluModos_tb/dut/disp2 File: C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3/aluModos.sv Line: 220
+# Loading work.MulNBit_tb
+# Loading work.MulNBit
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'dut'.  Expected 5, found 3.
+#    Time: 0 ps  Iteration: 0  Instance: /MulNBit_tb/dut File: C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3/MulNBit_tb.sv Line: 11
+# ** Warning: (vsim-3722) C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3/MulNBit_tb.sv(11): [TFMPC] - Missing connection for port 'acarreo'.
+# ** Warning: (vsim-3722) C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3/MulNBit_tb.sv(11): [TFMPC] - Missing connection for port 'desbordamiento'.
 # 
 # add wave *
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: maxta  Hostname: DESKTOP-PSAL98M  ProcessID: 9088
+#           Attempting to use alternate WLF file "./wlft44fsgt".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlft44fsgt
 # view structure
 # .main_pane.structure.interior.cs.body.struct
 # view signals
 # .main_pane.objects.interior.cs.body.tree
 # run -all
-# Sumador
-# xxxx: 0100100
-# Num: 0111 Compl: 1001
-# 0000: 0100100
-# 0000: 0100100
-# Num: 0101 Compl: 1011
-# Restador
-# 0000: 0100100
-# 0000: 0100100
-# 0001: 1111110
-# Num: 0111 Compl: 1001
-# 0001: 1111110
-# 0001: 1111110
-# Num: 0101 Compl: 1011
-# Num: 1000 Compl: 1000
-# Division
-# 0001: 1111000
-# 0000: 0100100
-# 0000: 0100100
-# 0001: 1111110
-# 0001: 1111110
-# 0010: 1001000
-# 0010: 1001000
-# 0011: 0110110
-# 0011: 0110110
-# 0011: 0110110
-# Modulo
-# 0011: 0110110
-# 0000: 0100100
-# 0000: 0100100
-# 0001: 1111110
-# 0001: 1111110
-# 0010: 1001000
-# 0010: 1001000
-# 0011: 0110110
-# 0011: 0110110
-# 0100: 1101100
-# 0100: 1101100
-# 0100: 1101100
-# AND
-# 0100: 0100100
-# 0000: 0100100
-# 0001: 1111110
-# 0001: 1111110
-# 0010: 1001000
-# 0010: 1001000
-# 0011: 0110110
-# 0011: 0110110
-# 0100: 1101100
-# 0100: 1101100
-# 0101: 0001000
-# 0101: 0001000
-# 0101: 0001000
-# AND 0001
-# AND 0001
-# AND 0001
-# AND 0001
-# AND 0001
-# AND 0001
-# OR
-# 0101: 1111110
-# 0000: 0100100
-# 0000: 0100100
-# 0001: 1111110
-# 0001: 1111110
-# 0010: 1001000
-# 0010: 1001000
-# 0011: 0110110
-# 0011: 0110110
-# 0100: 1101100
-# 0100: 1101100
-# 0101: 0001000
-# 0101: 0001000
-# 0110: 0000001
-# 0110: 0000001
-# 0110: 0000001
-# OR 0001
-# OR 0001
-# Num: 0001 Compl: 1111
-# OR 0001
-# OR 0001
-# OR 0001
-# OR 0011
-# OR 0011
-# XOR
-# 0110: 0110110
-# 0000: 0100100
-# 0000: 0100100
-# 0001: 1111110
-# 0001: 1111110
-# 0010: 1001000
-# 0010: 1001000
-# 0011: 0110110
-# 0011: 0110110
-# 0100: 1101100
-# 0100: 1101100
-# 0101: 0001000
-# 0101: 0001000
-# 0110: 0000001
-# 0110: 0000001
-# 0111: 1100010
-# 0111: 1100010
-# 0111: 1100010
-# XOR 0000
-# XOR 0000
-# XOR 0000
-# XOR 1110
-# XOR 1110
-# XOR 1110
-# XOR 0011
-# XOR 0011
-# LEFT
-# 0111: 0110110
-# 0000: 0100100
-# 0000: 0100100
-# 0001: 1111110
-# 0001: 1111110
-# 0010: 1001000
-# 0010: 1001000
-# 0011: 0110110
-# 0011: 0110110
-# 0100: 1101100
-# 0100: 1101100
-# 0101: 0001000
-# 0101: 0001000
-# 0110: 0000001
-# 0110: 0000001
-# 0111: 1100010
-# 0111: 1100010
-# 1000: 1111000
-# 1000: 1111000
-# 1000: 1111000
-# LEFT 0010
-# LEFT 0010
-# LEFT 1110
-# LEFT 1110
-# LEFT 0110
-# LEFT 0110
-# RIGHT
-# 1000: 0000001
-# 0000: 0100100
-# 0000: 0100100
-# 0001: 1111110
-# 0001: 1111110
-# 0010: 1001000
-# 0010: 1001000
-# 0011: 0110110
-# 0011: 0110110
-# 0100: 1101100
-# 0100: 1101100
-# 0101: 0001000
-# 0101: 0001000
-# 0110: 0000001
-# 0110: 0000001
-# 0111: 1100010
-# 0111: 1100010
-# 1000: 1111000
-# 1000: 1111000
-# 1001: 1001110
-# 1001: 1001110
-# 1001: 1001110
-# RIGHT 0000
-# RIGHT 0000
-# RIGHT 0111
-# RIGHT 0111
-# RIGHT 0001
-# RIGHT 0001
-# End time: 06:57:18 on Sep 12,2023, Elapsed time: 0:01:43
-# Errors: 0, Warnings: 8
+# End time: 21:53:43 on Sep 14,2023, Elapsed time: 0:04:47
+# Errors: 0, Warnings: 5

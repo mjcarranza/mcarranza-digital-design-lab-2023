@@ -1,5 +1,5 @@
 Flow report for ALU
-Tue Sep 12 06:50:17 2023
+Thu Sep 14 23:07:29 2023
 Quartus Prime Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
 
 
@@ -38,24 +38,29 @@ https://fpgasoftware.intel.com/eula.
 
 
 
-+------------------------------------------------------------------------------+
-; Flow Summary                                                                 ;
-+-----------------------------+------------------------------------------------+
-; Flow Status                 ; Successful - Tue Sep 12 06:50:17 2023          ;
-; Quartus Prime Version       ; 22.1std.0 Build 915 10/25/2022 SC Lite Edition ;
-; Revision Name               ; ALU                                            ;
-; Top-level Entity Name       ; aluModos                                       ;
-; Family                      ; Cyclone V                                      ;
-; Device                      ; 5CSEMA5F31C6                                   ;
-; Timing Models               ; Final                                          ;
-; Logic utilization (in ALMs) ; N/A until Partition Merge                      ;
-; Total registers             ; N/A until Partition Merge                      ;
-; Total pins                  ; N/A until Partition Merge                      ;
-; Total virtual pins          ; N/A until Partition Merge                      ;
-; Total block memory bits     ; N/A until Partition Merge                      ;
-; Total PLLs                  ; N/A until Partition Merge                      ;
-; Total DLLs                  ; N/A until Partition Merge                      ;
-+-----------------------------+------------------------------------------------+
++----------------------------------------------------------------------------------+
+; Flow Summary                                                                     ;
++---------------------------------+------------------------------------------------+
+; Flow Status                     ; Successful - Thu Sep 14 23:07:29 2023          ;
+; Quartus Prime Version           ; 22.1std.0 Build 915 10/25/2022 SC Lite Edition ;
+; Revision Name                   ; ALU                                            ;
+; Top-level Entity Name           ; aluModos                                       ;
+; Family                          ; Cyclone V                                      ;
+; Device                          ; 5CSEMA5F31C6                                   ;
+; Timing Models                   ; Final                                          ;
+; Logic utilization (in ALMs)     ; 127 / 32,070 ( < 1 % )                         ;
+; Total registers                 ; 1                                              ;
+; Total pins                      ; 53 / 457 ( 12 % )                              ;
+; Total virtual pins              ; 0                                              ;
+; Total block memory bits         ; 0 / 4,065,280 ( 0 % )                          ;
+; Total DSP Blocks                ; 0 / 87 ( 0 % )                                 ;
+; Total HSSI RX PCSs              ; 0                                              ;
+; Total HSSI PMA RX Deserializers ; 0                                              ;
+; Total HSSI TX PCSs              ; 0                                              ;
+; Total HSSI PMA TX Serializers   ; 0                                              ;
+; Total PLLs                      ; 0 / 6 ( 0 % )                                  ;
+; Total DLLs                      ; 0 / 4 ( 0 % )                                  ;
++---------------------------------+------------------------------------------------+
 
 
 +-----------------------------------------+
@@ -63,7 +68,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 09/12/2023 06:50:00 ;
+; Start date & time ; 09/14/2023 23:05:40 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; ALU                 ;
 +-------------------+---------------------+
@@ -74,12 +79,14 @@ https://fpgasoftware.intel.com/eula.
 +--------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
 ; Assignment Name                      ; Value                                  ; Default Value ; Entity Name ; Section Id                        ;
 +--------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
-; COMPILER_SIGNATURE_ID                ; 95161990511265.169452299915544         ; --            ; --          ; --                                ;
+; COMPILER_SIGNATURE_ID                ; 95161990511265.169475434010492         ; --            ; --          ; --                                ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; CompuertaAND_tb                   ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; Restador1Bit_tb                   ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; SumaNBit_tb                       ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; CompuertaXOR_tb                   ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; DivisionNBit_tb                   ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; aluModos_tb                       ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; MulNBit_tb                        ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; Suma1Bit_tb                       ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; RestadorNBit_tb                   ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; CompuertaOR_tb                    ;
@@ -89,13 +96,15 @@ https://fpgasoftware.intel.com/eula.
 ; EDA_GENERATE_FUNCTIONAL_NETLIST      ; Off                                    ; --            ; --          ; eda_board_design_symbol           ;
 ; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; aluModos_tb                            ; --            ; --          ; eda_simulation                    ;
 ; EDA_OUTPUT_DATA_FORMAT               ; Verilog Hdl                            ; --            ; --          ; eda_simulation                    ;
-; EDA_SIMULATION_TOOL                  ; Questa Intel FPGA (Verilog)            ; <None>        ; --          ; --                                ;
+; EDA_SIMULATION_TOOL                  ; ModelSim (Verilog)                     ; <None>        ; --          ; --                                ;
 ; EDA_TEST_BENCH_ENABLE_STATUS         ; TEST_BENCH_MODE                        ; --            ; --          ; eda_simulation                    ;
 ; EDA_TEST_BENCH_FILE                  ; CompuertaAND_tb.sv                     ; --            ; --          ; CompuertaAND_tb                   ;
 ; EDA_TEST_BENCH_FILE                  ; Restador1Bit_tb.sv                     ; --            ; --          ; Restador1Bit_tb                   ;
 ; EDA_TEST_BENCH_FILE                  ; SumaNBit_tb.sv                         ; --            ; --          ; SumaNBit_tb                       ;
 ; EDA_TEST_BENCH_FILE                  ; CompuertaXOR_tb.sv                     ; --            ; --          ; CompuertaXOR_tb                   ;
+; EDA_TEST_BENCH_FILE                  ; DivisionNBit_tb.sv                     ; --            ; --          ; DivisionNBit_tb                   ;
 ; EDA_TEST_BENCH_FILE                  ; aluModos_tb.sv                         ; --            ; --          ; aluModos_tb                       ;
+; EDA_TEST_BENCH_FILE                  ; MulNBit_tb.sv                          ; --            ; --          ; MulNBit_tb                        ;
 ; EDA_TEST_BENCH_FILE                  ; Suma1Bit_tb.sv                         ; --            ; --          ; Suma1Bit_tb                       ;
 ; EDA_TEST_BENCH_FILE                  ; RestadorNBit_tb.sv                     ; --            ; --          ; RestadorNBit_tb                   ;
 ; EDA_TEST_BENCH_FILE                  ; CompuertaOR_tb.sv                      ; --            ; --          ; CompuertaOR_tb                    ;
@@ -103,7 +112,9 @@ https://fpgasoftware.intel.com/eula.
 ; EDA_TEST_BENCH_MODULE_NAME           ; Restador1Bit_tb                        ; --            ; --          ; Restador1Bit_tb                   ;
 ; EDA_TEST_BENCH_MODULE_NAME           ; SumaNBit_tb                            ; --            ; --          ; SumaNBit_tb                       ;
 ; EDA_TEST_BENCH_MODULE_NAME           ; CompuertaXOR_tb                        ; --            ; --          ; CompuertaXOR_tb                   ;
+; EDA_TEST_BENCH_MODULE_NAME           ; DivisionNBit_tb                        ; --            ; --          ; DivisionNBit_tb                   ;
 ; EDA_TEST_BENCH_MODULE_NAME           ; aluModos_tb                            ; --            ; --          ; aluModos_tb                       ;
+; EDA_TEST_BENCH_MODULE_NAME           ; MulNBit_tb                             ; --            ; --          ; MulNBit_tb                        ;
 ; EDA_TEST_BENCH_MODULE_NAME           ; Suma1Bit_tb                            ; --            ; --          ; Suma1Bit_tb                       ;
 ; EDA_TEST_BENCH_MODULE_NAME           ; RestadorNBit_tb                        ; --            ; --          ; RestadorNBit_tb                   ;
 ; EDA_TEST_BENCH_MODULE_NAME           ; CompuertaOR_tb                         ; --            ; --          ; CompuertaOR_tb                    ;
@@ -115,6 +126,8 @@ https://fpgasoftware.intel.com/eula.
 ; EDA_TEST_BENCH_NAME                  ; CompuertaAND_tb                        ; --            ; --          ; eda_simulation                    ;
 ; EDA_TEST_BENCH_NAME                  ; CompuertaOR_tb                         ; --            ; --          ; eda_simulation                    ;
 ; EDA_TEST_BENCH_NAME                  ; CompuertaXOR_tb                        ; --            ; --          ; eda_simulation                    ;
+; EDA_TEST_BENCH_NAME                  ; MulNBit_tb                             ; --            ; --          ; eda_simulation                    ;
+; EDA_TEST_BENCH_NAME                  ; DivisionNBit_tb                        ; --            ; --          ; eda_simulation                    ;
 ; EDA_TIME_SCALE                       ; 1 ps                                   ; --            ; --          ; eda_simulation                    ;
 ; MAX_CORE_JUNCTION_TEMP               ; 85                                     ; --            ; --          ; --                                ;
 ; MIN_CORE_JUNCTION_TEMP               ; 0                                      ; --            ; --          ; --                                ;
@@ -128,29 +141,41 @@ https://fpgasoftware.intel.com/eula.
 +--------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------+
-; Flow Elapsed Time                                                                                                          ;
-+------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Module Name            ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
-+------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Elaboration ; 00:00:18     ; 1.0                     ; 4780 MB             ; 00:00:36                           ;
-; Total                  ; 00:00:18     ; --                      ; --                  ; 00:00:36                           ;
-+------------------------+--------------+-------------------------+---------------------+------------------------------------+
++--------------------------------------------------------------------------------------------------------------------------+
+; Flow Elapsed Time                                                                                                        ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Analysis & Synthesis ; 00:00:28     ; 1.0                     ; 4803 MB             ; 00:00:35                           ;
+; Fitter               ; 00:00:58     ; 1.0                     ; 6167 MB             ; 00:01:25                           ;
+; Assembler            ; 00:00:11     ; 1.0                     ; 4889 MB             ; 00:00:07                           ;
+; Timing Analyzer      ; 00:00:08     ; 1.1                     ; 5142 MB             ; 00:00:07                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4728 MB             ; 00:00:01                           ;
+; Total                ; 00:01:46     ; --                      ; --                  ; 00:02:15                           ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
-+--------------------------------------------------------------------------------------+
-; Flow OS Summary                                                                      ;
-+------------------------+------------------+------------+------------+----------------+
-; Module Name            ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
-+------------------------+------------------+------------+------------+----------------+
-; Analysis & Elaboration ; DESKTOP-PSAL98M  ; Windows 10 ; 10.0       ; x86_64         ;
-+------------------------+------------------+------------+------------+----------------+
++------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                    ;
++----------------------+------------------+------------+------------+----------------+
+; Module Name          ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
++----------------------+------------------+------------+------------+----------------+
+; Analysis & Synthesis ; DESKTOP-PSAL98M  ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter               ; DESKTOP-PSAL98M  ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler            ; DESKTOP-PSAL98M  ; Windows 10 ; 10.0       ; x86_64         ;
+; Timing Analyzer      ; DESKTOP-PSAL98M  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-PSAL98M  ; Windows 10 ; 10.0       ; x86_64         ;
++----------------------+------------------+------------+------------+----------------+
 
 
 ------------
 ; Flow Log ;
 ------------
-quartus_map --read_settings_files=on --write_settings_files=off ALU -c ALU --analysis_and_elaboration
+quartus_map --read_settings_files=on --write_settings_files=off ALU -c ALU
+quartus_fit --read_settings_files=off --write_settings_files=off ALU -c ALU
+quartus_asm --read_settings_files=off --write_settings_files=off ALU -c ALU
+quartus_sta ALU -c ALU
+quartus_eda --read_settings_files=off --write_settings_files=off ALU -c ALU
 
 
 

@@ -1,6 +1,7 @@
 module MulNBit #(parameter n = 4) (
 	 input logic [n-1:0] A, B, 
-	 output logic [2*n-1:0] Product
+	 output logic [n-1:0] Product, 
+	 output logic acarreo, desbordamiento
 	 );
 	 	 
     always_comb

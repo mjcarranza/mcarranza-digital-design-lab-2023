@@ -74,6 +74,10 @@ module aluModos #(
 					end
 				end
 				
+				6'd1: begin 
+					digitos_temp = resultados[2];
+				end
+				
 				6'd3: begin 
 					digitos_temp = resultados[3];
 				end
@@ -156,6 +160,14 @@ module aluModos #(
         .B(B),
         .resta(resultados[1]),
         .Cout(flags[3])
+    );
+	 
+	 MulNBit #(
+        .n(n)
+    ) dut (
+        .A(A),
+        .B(B),
+        .Product(resultados[2])
     );
 	 
 	 DivisionNBit #(
