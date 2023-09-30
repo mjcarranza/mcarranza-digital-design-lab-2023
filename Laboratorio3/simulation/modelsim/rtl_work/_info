@@ -9,57 +9,380 @@ z2
 !i10f 100
 cModel Technology
 Z0 dC:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3/simulation/modelsim
-vMulNBit
+valuModos
 Z1 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
-Z2 !s110 1694749736
+Z2 !s110 1696036800
 !i10b 1
-!s100 YkO:eSJIiJ8^P1J5ab@lX3
+!s100 LK=^:^n6TdK2O3R8g^nld0
 Z3 !s11b Dg1SIo80bB@j0V0VzS_@n1
-ICHdL8?XjE85AN=h5K7RJY1
+I`MoJ]E2EaT@X5g^4Ta[Ag0
 Z4 VDg1SIo80bB@j0V0VzS_@n1
 S1
 R0
-w1694525729
-8C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3/MulNBit.sv
-FC:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3/MulNBit.sv
-!i122 0
-L0 1 17
+w1694525545
+8C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3/aluModos.sv
+FC:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3/aluModos.sv
+!i122 10
+L0 1 309
 Z5 OV;L;2020.1;71
 r1
 !s85 0
 31
-Z6 !s108 1694749736.000000
-!s107 C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3/MulNBit.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3|C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3/MulNBit.sv|
+Z6 !s108 1696036800.000000
+!s107 C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3/aluModos.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3|C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3/aluModos.sv|
 !i113 1
 Z7 o-sv -work work
 Z8 !s92 -sv -work work +incdir+C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3
 Z9 tCvgOpt 0
-n@mul@n@bit
-vMulNBit_tb
+nalu@modos
+vCompuertaAND
 R1
-R2
+Z10 !s110 1696036799
 !i10b 1
-!s100 ilLI9IV7II?J==gQT;^Bg2
+!s100 6_1L2AWgaZco[h[MA;nOd3
 R3
-IY?]W@bXih35bdgUoC1_Bd1
+I39M[7ikkkF^nzUZcjT>k92
 R4
 S1
 R0
-w1694524050
-8C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3/MulNBit_tb.sv
-FC:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3/MulNBit_tb.sv
-!i122 1
-L0 1 32
+Z11 w1694522599
+8C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3/CompuertaAND.sv
+FC:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3/CompuertaAND.sv
+!i122 5
+Z12 L0 1 17
+R5
+r1
+!s85 0
+31
+Z13 !s108 1696036799.000000
+!s107 C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3/CompuertaAND.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3|C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3/CompuertaAND.sv|
+!i113 1
+R7
+R8
+R9
+n@compuerta@a@n@d
+vCompuertaOR
+R1
+R10
+!i10b 1
+!s100 TGFOiEg`:>Yllj;am9Gn[3
+R3
+IYj@oIQgkhH0^0kAMHLIQ50
+R4
+S1
+R0
+R11
+8C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3/CompuertaOR.sv
+FC:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3/CompuertaOR.sv
+!i122 4
+Z14 L0 1 18
+R5
+r1
+!s85 0
+31
+R13
+!s107 C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3/CompuertaOR.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3|C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3/CompuertaOR.sv|
+!i113 1
+R7
+R8
+R9
+n@compuerta@o@r
+vCompuertaXOR
+R1
+R10
+!i10b 1
+!s100 lC70=^mN]V9AZFe]memGC1
+R3
+I[g6@5SFf@::SJz8Z0jzBW3
+R4
+S1
+R0
+R11
+8C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3/CompuertaXOR.sv
+FC:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3/CompuertaXOR.sv
+!i122 3
+R14
+R5
+r1
+!s85 0
+31
+R13
+!s107 C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3/CompuertaXOR.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3|C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3/CompuertaXOR.sv|
+!i113 1
+R7
+R8
+R9
+n@compuerta@x@o@r
+vdecodificador_modos
+R1
+Z15 !s110 1696036801
+!i10b 1
+!s100 lPXKUBP;@VmkJ_ZDVlz;Y1
+R3
+IE40m0Om5E@j<CTD1c0D@<2
+R4
+S1
+R0
+w1694344194
+8C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3/decodificador_modos.sv
+FC:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3/decodificador_modos.sv
+!i122 11
+L0 1 22
 R5
 r1
 !s85 0
 31
 R6
-!s107 C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3/MulNBit_tb.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3|C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3/MulNBit_tb.sv|
+!s107 C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3/decodificador_modos.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3|C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3/decodificador_modos.sv|
 !i113 1
 R7
 R8
 R9
-n@mul@n@bit_tb
+vDivisionNBit
+R1
+Z16 !s110 1696036798
+!i10b 1
+!s100 `z[RjhUE[@M8Bj>iiEleT3
+R3
+IKRDjJ^3RaJ8:4:fE3C_bh0
+R4
+S1
+R0
+w1694522611
+8C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3/DivisionNBit.sv
+FC:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3/DivisionNBit.sv
+!i122 0
+L0 1 24
+R5
+r1
+!s85 0
+31
+Z17 !s108 1696036798.000000
+!s107 C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3/DivisionNBit.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3|C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3/DivisionNBit.sv|
+!i113 1
+R7
+R8
+R9
+n@division@n@bit
+vMulNBit
+R1
+R15
+!i10b 1
+!s100 YkO:eSJIiJ8^P1J5ab@lX3
+R3
+ICHdL8?XjE85AN=h5K7RJY1
+R4
+S1
+R0
+w1694525729
+8C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3/MulNBit.sv
+FC:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3/MulNBit.sv
+!i122 12
+R12
+R5
+r1
+!s85 0
+31
+Z18 !s108 1696036801.000000
+!s107 C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3/MulNBit.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3|C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3/MulNBit.sv|
+!i113 1
+R7
+R8
+R9
+n@mul@n@bit
+vRestador1Bit
+R1
+R2
+!i10b 1
+!s100 @XnLIK]OoTAk[[e6BLg8b1
+R3
+IG=M8iclUaX:e<6PXcM:N>0
+R4
+S1
+R0
+w1693954365
+8C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3/Restador1Bit.sv
+FC:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3/Restador1Bit.sv
+!i122 7
+L0 1 11
+R5
+r1
+!s85 0
+31
+R13
+!s107 C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3/Restador1Bit.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3|C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3/Restador1Bit.sv|
+!i113 1
+R7
+R8
+R9
+n@restador1@bit
+vRestadorNBit
+R1
+R2
+!i10b 1
+!s100 IC]>3[291eEY0l>aI5Yk71
+R3
+I5ik?Nznm3f<MlZOI`ziCf2
+R4
+S1
+R0
+w1694495247
+8C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3/RestadorNBit.sv
+FC:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3/RestadorNBit.sv
+!i122 9
+L0 1 49
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3/RestadorNBit.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3|C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3/RestadorNBit.sv|
+!i113 1
+R7
+R8
+R9
+n@restador@n@bit
+vshiftLeft
+R1
+R16
+!i10b 1
+!s100 ;^zAm[k:mYYz7[GS]XVO=0
+R3
+IE`f:]BCGIo1@NJJ^hEVm22
+R4
+S1
+R0
+Z19 w1694478343
+8C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3/shiftLeft.sv
+FC:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3/shiftLeft.sv
+!i122 2
+Z20 L0 3 8
+R5
+r1
+!s85 0
+31
+R17
+!s107 C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3/shiftLeft.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3|C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3/shiftLeft.sv|
+!i113 1
+R7
+R8
+R9
+nshift@left
+vshiftRight
+R1
+R16
+!i10b 1
+!s100 acZKHGTRdE4L]QE?5E<9Q1
+R3
+IDIMM]1c@I?@gB<m]95YCd3
+R4
+S1
+R0
+R19
+8C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3/shiftRight.sv
+FC:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3/shiftRight.sv
+!i122 1
+R20
+R5
+r1
+!s85 0
+31
+R17
+!s107 C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3/shiftRight.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3|C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3/shiftRight.sv|
+!i113 1
+R7
+R8
+R9
+nshift@right
+vSuma1Bit
+R1
+R10
+!i10b 1
+!s100 1LbnYm6Si0Ta`C?FmlTBG2
+R3
+IMhfa=KU3GYak9VG17<BTj2
+R4
+S1
+R0
+w1694070499
+8C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3/Suma1Bit.sv
+FC:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3/Suma1Bit.sv
+!i122 6
+L0 1 10
+R5
+r1
+!s85 0
+31
+R13
+!s107 C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3/Suma1Bit.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3|C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3/Suma1Bit.sv|
+!i113 1
+R7
+R8
+R9
+n@suma1@bit
+vSuma1Bit_tb
+R1
+R15
+!i10b 1
+!s100 I35Y9bR`Le]?^3J<cCK0T2
+R3
+IELDVM:dPQ0YhJYhDQ<`Og1
+R4
+S1
+R0
+w1693328605
+8C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3/Suma1Bit_tb.sv
+FC:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3/Suma1Bit_tb.sv
+!i122 13
+L0 1 40
+R5
+r1
+!s85 0
+31
+R18
+!s107 C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3/Suma1Bit_tb.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3|C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3/Suma1Bit_tb.sv|
+!i113 1
+R7
+R8
+R9
+n@suma1@bit_tb
+vSumaNBit
+R1
+R2
+!i10b 1
+!s100 eYSg3Te;DElXKcACzTk0W1
+R3
+IIOfR[U2dGFnH3]0PMd`jl3
+R4
+S1
+R0
+w1694073703
+8C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3/SumaNBit.sv
+FC:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3/SumaNBit.sv
+!i122 8
+L0 1 27
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3/SumaNBit.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3|C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3/SumaNBit.sv|
+!i113 1
+R7
+R8
+R9
+n@suma@n@bit

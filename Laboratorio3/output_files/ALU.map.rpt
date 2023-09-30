@@ -1,53 +1,45 @@
-Analysis & Synthesis report for ALU
-Thu Sep 14 23:06:06 2023
-Quartus Prime Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
+Analysis & Elaboration report for ALU
+Fri Sep 29 19:19:45 2023
+Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
 ---------------------
 ; Table of Contents ;
 ---------------------
   1. Legal Notice
-  2. Analysis & Synthesis Summary
-  3. Analysis & Synthesis Settings
-  4. Parallel Compilation
-  5. Analysis & Synthesis Source Files Read
-  6. Analysis & Synthesis Resource Usage Summary
-  7. Analysis & Synthesis Resource Utilization by Entity
-  8. User-Specified and Inferred Latches
-  9. Registers Removed During Synthesis
- 10. General Register Statistics
- 11. Parameter Settings for User Entity Instance: Top-level Entity: |aluModos
- 12. Parameter Settings for User Entity Instance: SumaNBit:dutSum
- 13. Parameter Settings for User Entity Instance: RestadorNBit:dutRes
- 14. Parameter Settings for User Entity Instance: MulNBit:dut
- 15. Parameter Settings for User Entity Instance: DivisionNBit:dutDiv
- 16. Parameter Settings for User Entity Instance: DivisionNBit:dutMod
- 17. Parameter Settings for User Entity Instance: CompuertaAND:dutAND
- 18. Parameter Settings for User Entity Instance: CompuertaOR:dutOR
- 19. Parameter Settings for User Entity Instance: CompuertaXOR:dutXOR
- 20. Parameter Settings for User Entity Instance: shiftLeft:dutLeft
- 21. Parameter Settings for User Entity Instance: shiftRight:dutRight
- 22. Port Connectivity Checks: "decodificador_modos:flagNeg"
- 23. Port Connectivity Checks: "decodificador_modos:flagAca"
- 24. Port Connectivity Checks: "decodificador_modos:flagCero"
- 25. Port Connectivity Checks: "decodificador_modos:flagDes"
- 26. Port Connectivity Checks: "decodificador_modos:disp2"
- 27. Port Connectivity Checks: "DivisionNBit:dutMod"
- 28. Port Connectivity Checks: "DivisionNBit:dutDiv"
- 29. Port Connectivity Checks: "MulNBit:dut"
- 30. Port Connectivity Checks: "RestadorNBit:dutRes|Restador1Bit:loop_01[0].res"
- 31. Port Connectivity Checks: "SumaNBit:dutSum|Suma1Bit:loop_01[0].sum"
- 32. Post-Synthesis Netlist Statistics for Top Partition
- 33. Elapsed Time Per Partition
- 34. Analysis & Synthesis Messages
- 35. Analysis & Synthesis Suppressed Messages
+  2. Analysis & Elaboration Summary
+  3. Parallel Compilation
+  4. Parameter Settings for User Entity Instance: Top-level Entity: |aluModos
+  5. Parameter Settings for User Entity Instance: SumaNBit:dutSum
+  6. Parameter Settings for User Entity Instance: RestadorNBit:dutRes
+  7. Parameter Settings for User Entity Instance: MulNBit:dut
+  8. Parameter Settings for User Entity Instance: DivisionNBit:dutDiv
+  9. Parameter Settings for User Entity Instance: DivisionNBit:dutMod
+ 10. Parameter Settings for User Entity Instance: CompuertaAND:dutAND
+ 11. Parameter Settings for User Entity Instance: CompuertaOR:dutOR
+ 12. Parameter Settings for User Entity Instance: CompuertaXOR:dutXOR
+ 13. Parameter Settings for User Entity Instance: shiftLeft:dutLeft
+ 14. Parameter Settings for User Entity Instance: shiftRight:dutRight
+ 15. Analysis & Elaboration Settings
+ 16. Port Connectivity Checks: "decodificador_modos:flagNeg"
+ 17. Port Connectivity Checks: "decodificador_modos:flagAca"
+ 18. Port Connectivity Checks: "decodificador_modos:flagCero"
+ 19. Port Connectivity Checks: "decodificador_modos:flagDes"
+ 20. Port Connectivity Checks: "decodificador_modos:disp2"
+ 21. Port Connectivity Checks: "DivisionNBit:dutMod"
+ 22. Port Connectivity Checks: "DivisionNBit:dutDiv"
+ 23. Port Connectivity Checks: "MulNBit:dut"
+ 24. Port Connectivity Checks: "RestadorNBit:dutRes|Restador1Bit:loop_01[0].res"
+ 25. Port Connectivity Checks: "SumaNBit:dutSum|Suma1Bit:loop_01[0].sum"
+ 26. Analysis & Elaboration Messages
+ 27. Analysis & Elaboration Suppressed Messages
 
 
 
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 2022  Intel Corporation. All rights reserved.
+Copyright (C) 2020  Intel Corporation. All rights reserved.
 Your use of Intel Corporation's design tools, logic functions 
 and other software and tools, and any partner logic 
 functions, and any output files from any of the foregoing 
@@ -64,114 +56,22 @@ https://fpgasoftware.intel.com/eula.
 
 
 
-+----------------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                                     ;
-+---------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Thu Sep 14 23:06:06 2023          ;
-; Quartus Prime Version           ; 22.1std.0 Build 915 10/25/2022 SC Lite Edition ;
-; Revision Name                   ; ALU                                            ;
-; Top-level Entity Name           ; aluModos                                       ;
-; Family                          ; Cyclone V                                      ;
-; Logic utilization (in ALMs)     ; N/A                                            ;
-; Total registers                 ; 1                                              ;
-; Total pins                      ; 53                                             ;
-; Total virtual pins              ; 0                                              ;
-; Total block memory bits         ; 0                                              ;
-; Total DSP Blocks                ; 0                                              ;
-; Total HSSI RX PCSs              ; 0                                              ;
-; Total HSSI PMA RX Deserializers ; 0                                              ;
-; Total HSSI TX PCSs              ; 0                                              ;
-; Total HSSI PMA TX Serializers   ; 0                                              ;
-; Total PLLs                      ; 0                                              ;
-; Total DLLs                      ; 0                                              ;
-+---------------------------------+------------------------------------------------+
-
-
-+---------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Settings                                                                                             ;
-+---------------------------------------------------------------------------------+--------------------+--------------------+
-; Option                                                                          ; Setting            ; Default Value      ;
-+---------------------------------------------------------------------------------+--------------------+--------------------+
-; Device                                                                          ; 5CSEMA5F31C6       ;                    ;
-; Top-level entity name                                                           ; aluModos           ; ALU                ;
-; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
-; Use smart compilation                                                           ; Off                ; Off                ;
-; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
-; Enable compact report table                                                     ; Off                ; Off                ;
-; Restructure Multiplexers                                                        ; Auto               ; Auto               ;
-; MLAB Add Timing Constraints For Mixed-Port Feed-Through Mode Setting Don't Care ; Off                ; Off                ;
-; Create Debugging Nodes for IP Cores                                             ; Off                ; Off                ;
-; Preserve fewer node names                                                       ; On                 ; On                 ;
-; Intel FPGA IP Evaluation Mode                                                   ; Enable             ; Enable             ;
-; Verilog Version                                                                 ; Verilog_2001       ; Verilog_2001       ;
-; VHDL Version                                                                    ; VHDL_1993          ; VHDL_1993          ;
-; State Machine Processing                                                        ; Auto               ; Auto               ;
-; Safe State Machine                                                              ; Off                ; Off                ;
-; Extract Verilog State Machines                                                  ; On                 ; On                 ;
-; Extract VHDL State Machines                                                     ; On                 ; On                 ;
-; Ignore Verilog initial constructs                                               ; Off                ; Off                ;
-; Iteration limit for constant Verilog loops                                      ; 5000               ; 5000               ;
-; Iteration limit for non-constant Verilog loops                                  ; 250                ; 250                ;
-; Add Pass-Through Logic to Inferred RAMs                                         ; On                 ; On                 ;
-; Infer RAMs from Raw Logic                                                       ; On                 ; On                 ;
-; Parallel Synthesis                                                              ; On                 ; On                 ;
-; DSP Block Balancing                                                             ; Auto               ; Auto               ;
-; NOT Gate Push-Back                                                              ; On                 ; On                 ;
-; Power-Up Don't Care                                                             ; On                 ; On                 ;
-; Remove Redundant Logic Cells                                                    ; Off                ; Off                ;
-; Remove Duplicate Registers                                                      ; On                 ; On                 ;
-; Ignore CARRY Buffers                                                            ; Off                ; Off                ;
-; Ignore CASCADE Buffers                                                          ; Off                ; Off                ;
-; Ignore GLOBAL Buffers                                                           ; Off                ; Off                ;
-; Ignore ROW GLOBAL Buffers                                                       ; Off                ; Off                ;
-; Ignore LCELL Buffers                                                            ; Off                ; Off                ;
-; Ignore SOFT Buffers                                                             ; On                 ; On                 ;
-; Limit AHDL Integers to 32 Bits                                                  ; Off                ; Off                ;
-; Optimization Technique                                                          ; Balanced           ; Balanced           ;
-; Carry Chain Length                                                              ; 70                 ; 70                 ;
-; Auto Carry Chains                                                               ; On                 ; On                 ;
-; Auto Open-Drain Pins                                                            ; On                 ; On                 ;
-; Perform WYSIWYG Primitive Resynthesis                                           ; Off                ; Off                ;
-; Auto ROM Replacement                                                            ; On                 ; On                 ;
-; Auto RAM Replacement                                                            ; On                 ; On                 ;
-; Auto DSP Block Replacement                                                      ; On                 ; On                 ;
-; Auto Shift Register Replacement                                                 ; Auto               ; Auto               ;
-; Allow Shift Register Merging across Hierarchies                                 ; Auto               ; Auto               ;
-; Auto Clock Enable Replacement                                                   ; On                 ; On                 ;
-; Strict RAM Replacement                                                          ; Off                ; Off                ;
-; Allow Synchronous Control Signals                                               ; On                 ; On                 ;
-; Force Use of Synchronous Clear Signals                                          ; Off                ; Off                ;
-; Auto Resource Sharing                                                           ; Off                ; Off                ;
-; Allow Any RAM Size For Recognition                                              ; Off                ; Off                ;
-; Allow Any ROM Size For Recognition                                              ; Off                ; Off                ;
-; Allow Any Shift Register Size For Recognition                                   ; Off                ; Off                ;
-; Use LogicLock Constraints during Resource Balancing                             ; On                 ; On                 ;
-; Ignore translate_off and synthesis_off directives                               ; Off                ; Off                ;
-; Timing-Driven Synthesis                                                         ; On                 ; On                 ;
-; Report Parameter Settings                                                       ; On                 ; On                 ;
-; Report Source Assignments                                                       ; On                 ; On                 ;
-; Report Connectivity Checks                                                      ; On                 ; On                 ;
-; Ignore Maximum Fan-Out Assignments                                              ; Off                ; Off                ;
-; Synchronization Register Chain Length                                           ; 3                  ; 3                  ;
-; Power Optimization During Synthesis                                             ; Normal compilation ; Normal compilation ;
-; HDL message level                                                               ; Level2             ; Level2             ;
-; Suppress Register Optimization Related Messages                                 ; Off                ; Off                ;
-; Number of Removed Registers Reported in Synthesis Report                        ; 5000               ; 5000               ;
-; Number of Swept Nodes Reported in Synthesis Report                              ; 5000               ; 5000               ;
-; Number of Inverted Registers Reported in Synthesis Report                       ; 100                ; 100                ;
-; Clock MUX Protection                                                            ; On                 ; On                 ;
-; Auto Gated Clock Conversion                                                     ; Off                ; Off                ;
-; Block Design Naming                                                             ; Auto               ; Auto               ;
-; SDC constraint protection                                                       ; Off                ; Off                ;
-; Synthesis Effort                                                                ; Auto               ; Auto               ;
-; Shift Register Replacement - Allow Asynchronous Clear Signal                    ; On                 ; On                 ;
-; Pre-Mapping Resynthesis Optimization                                            ; Off                ; Off                ;
-; Analysis & Synthesis Message Level                                              ; Medium             ; Medium             ;
-; Disable Register Merging Across Hierarchies                                     ; Auto               ; Auto               ;
-; Resource Aware Inference For Block RAM                                          ; On                 ; On                 ;
-; Automatic Parallel Synthesis                                                    ; On                 ; On                 ;
-; Partial Reconfiguration Bitstream ID                                            ; Off                ; Off                ;
-+---------------------------------------------------------------------------------+--------------------+--------------------+
++-----------------------------------------------------------------------------+
+; Analysis & Elaboration Summary                                              ;
++-------------------------------+---------------------------------------------+
+; Analysis & Elaboration Status ; Successful - Fri Sep 29 19:19:45 2023       ;
+; Quartus Prime Version         ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
+; Revision Name                 ; ALU                                         ;
+; Top-level Entity Name         ; aluModos                                    ;
+; Family                        ; Cyclone V                                   ;
+; Logic utilization (in ALMs)   ; N/A until Partition Merge                   ;
+; Total registers               ; N/A until Partition Merge                   ;
+; Total pins                    ; N/A until Partition Merge                   ;
+; Total virtual pins            ; N/A until Partition Merge                   ;
+; Total block memory bits       ; N/A until Partition Merge                   ;
+; Total PLLs                    ; N/A until Partition Merge                   ;
+; Total DLLs                    ; N/A until Partition Merge                   ;
++-------------------------------+---------------------------------------------+
 
 
 +------------------------------------------+
@@ -183,123 +83,11 @@ https://fpgasoftware.intel.com/eula.
 ; Maximum allowed            ; 2           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 2           ;
+; Maximum used               ; 1           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.0%      ;
 +----------------------------+-------------+
-
-
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                              ;
-+----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                                          ; Library ;
-+----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------------------------------+---------+
-; DivisionNBit.sv                  ; yes             ; User SystemVerilog HDL File  ; C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3/DivisionNBit.sv        ;         ;
-; shiftRight.sv                    ; yes             ; User SystemVerilog HDL File  ; C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3/shiftRight.sv          ;         ;
-; shiftLeft.sv                     ; yes             ; User SystemVerilog HDL File  ; C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3/shiftLeft.sv           ;         ;
-; CompuertaXOR.sv                  ; yes             ; User SystemVerilog HDL File  ; C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3/CompuertaXOR.sv        ;         ;
-; CompuertaOR.sv                   ; yes             ; User SystemVerilog HDL File  ; C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3/CompuertaOR.sv         ;         ;
-; CompuertaAND.sv                  ; yes             ; User SystemVerilog HDL File  ; C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3/CompuertaAND.sv        ;         ;
-; Suma1Bit.sv                      ; yes             ; User SystemVerilog HDL File  ; C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3/Suma1Bit.sv            ;         ;
-; Restador1Bit.sv                  ; yes             ; User SystemVerilog HDL File  ; C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3/Restador1Bit.sv        ;         ;
-; SumaNBit.sv                      ; yes             ; User SystemVerilog HDL File  ; C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3/SumaNBit.sv            ;         ;
-; RestadorNBit.sv                  ; yes             ; User SystemVerilog HDL File  ; C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3/RestadorNBit.sv        ;         ;
-; aluModos.sv                      ; yes             ; User SystemVerilog HDL File  ; C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3/aluModos.sv            ;         ;
-; decodificador_modos.sv           ; yes             ; User SystemVerilog HDL File  ; C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3/decodificador_modos.sv ;         ;
-; MulNBit.sv                       ; yes             ; User SystemVerilog HDL File  ; C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3/MulNBit.sv             ;         ;
-+----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------------------------------+---------+
-
-
-+----------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary              ;
-+---------------------------------------------+------------+
-; Resource                                    ; Usage      ;
-+---------------------------------------------+------------+
-; Estimate of Logic utilization (ALMs needed) ; 128        ;
-;                                             ;            ;
-; Combinational ALUT usage for logic          ; 207        ;
-;     -- 7 input functions                    ; 8          ;
-;     -- 6 input functions                    ; 41         ;
-;     -- 5 input functions                    ; 42         ;
-;     -- 4 input functions                    ; 27         ;
-;     -- <=3 input functions                  ; 89         ;
-;                                             ;            ;
-; Dedicated logic registers                   ; 1          ;
-;                                             ;            ;
-; I/O pins                                    ; 53         ;
-;                                             ;            ;
-; Total DSP Blocks                            ; 0          ;
-;                                             ;            ;
-; Maximum fan-out node                        ; B[3]~input ;
-; Maximum fan-out                             ; 57         ;
-; Total fan-out                               ; 917        ;
-; Average fan-out                             ; 2.92       ;
-+---------------------------------------------+------------+
-
-
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                           ;
-+-------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------+---------------------+--------------+
-; Compilation Hierarchy Node          ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                       ; Entity Name         ; Library Name ;
-+-------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------+---------------------+--------------+
-; |aluModos                           ; 207 (43)            ; 1 (1)                     ; 0                 ; 0          ; 53   ; 0            ; |aluModos                                                 ; aluModos            ; work         ;
-;    |DivisionNBit:dutDiv|            ; 8 (8)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |aluModos|DivisionNBit:dutDiv                             ; DivisionNBit        ; work         ;
-;    |DivisionNBit:dutMod|            ; 135 (135)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |aluModos|DivisionNBit:dutMod                             ; DivisionNBit        ; work         ;
-;    |RestadorNBit:dutRes|            ; 7 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |aluModos|RestadorNBit:dutRes                             ; RestadorNBit        ; work         ;
-;       |Restador1Bit:loop_01[0].res| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |aluModos|RestadorNBit:dutRes|Restador1Bit:loop_01[0].res ; Restador1Bit        ; work         ;
-;       |Restador1Bit:loop_01[1].res| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |aluModos|RestadorNBit:dutRes|Restador1Bit:loop_01[1].res ; Restador1Bit        ; work         ;
-;       |Restador1Bit:loop_01[2].res| ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |aluModos|RestadorNBit:dutRes|Restador1Bit:loop_01[2].res ; Restador1Bit        ; work         ;
-;       |Restador1Bit:loop_01[3].res| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |aluModos|RestadorNBit:dutRes|Restador1Bit:loop_01[3].res ; Restador1Bit        ; work         ;
-;    |SumaNBit:dutSum|                ; 4 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |aluModos|SumaNBit:dutSum                                 ; SumaNBit            ; work         ;
-;       |Suma1Bit:loop_01[0].sum|     ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |aluModos|SumaNBit:dutSum|Suma1Bit:loop_01[0].sum         ; Suma1Bit            ; work         ;
-;       |Suma1Bit:loop_01[1].sum|     ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |aluModos|SumaNBit:dutSum|Suma1Bit:loop_01[1].sum         ; Suma1Bit            ; work         ;
-;       |Suma1Bit:loop_01[2].sum|     ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |aluModos|SumaNBit:dutSum|Suma1Bit:loop_01[2].sum         ; Suma1Bit            ; work         ;
-;    |decodificador_modos:disp|       ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |aluModos|decodificador_modos:disp                        ; decodificador_modos ; work         ;
-;    |decodificador_modos:flagNeg|    ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |aluModos|decodificador_modos:flagNeg                     ; decodificador_modos ; work         ;
-+-------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------+---------------------+--------------+
-Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
-
-
-+---------------------------------------------------------------------------------------------------+
-; User-Specified and Inferred Latches                                                               ;
-+----------------------------------------------------+---------------------+------------------------+
-; Latch Name                                         ; Latch Enable Signal ; Free of Timing Hazards ;
-+----------------------------------------------------+---------------------+------------------------+
-; modo[1]                                            ; selector            ; yes                    ;
-; modo[3]                                            ; selector            ; yes                    ;
-; modo[2]                                            ; selector            ; yes                    ;
-; modo[0]                                            ; selector            ; yes                    ;
-; Number of user-specified and inferred latches = 4  ;                     ;                        ;
-+----------------------------------------------------+---------------------+------------------------+
-Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
-
-
-+-------------------------------------------------------------+
-; Registers Removed During Synthesis                          ;
-+---------------------------------------+---------------------+
-; Register name                         ; Reason for Removal  ;
-+---------------------------------------+---------------------+
-; deco[1]                               ; Merged with deco[0] ;
-; flag                                  ; Merged with deco[0] ;
-; Total Number of Removed Registers = 2 ;                     ;
-+---------------------------------------+---------------------+
-
-
-+------------------------------------------------------+
-; General Register Statistics                          ;
-+----------------------------------------------+-------+
-; Statistic                                    ; Value ;
-+----------------------------------------------+-------+
-; Total registers                              ; 1     ;
-; Number of registers using Synchronous Clear  ; 0     ;
-; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 1     ;
-; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 0     ;
-; Number of registers using Preset             ; 0     ;
-+----------------------------------------------+-------+
 
 
 +--------------------------------------------------------------------------+
@@ -410,6 +198,93 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; N              ; 4     ; Signed Integer                          ;
 +----------------+-------+-----------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Elaboration Settings                                                                                           ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                          ; Setting            ; Default Value      ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                          ; 5CSEMA5F31C6       ;                    ;
+; Top-level entity name                                                           ; aluModos           ; ALU                ;
+; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
+; Use smart compilation                                                           ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
+; Enable compact report table                                                     ; Off                ; Off                ;
+; Restructure Multiplexers                                                        ; Auto               ; Auto               ;
+; MLAB Add Timing Constraints For Mixed-Port Feed-Through Mode Setting Don't Care ; Off                ; Off                ;
+; Create Debugging Nodes for IP Cores                                             ; Off                ; Off                ;
+; Preserve fewer node names                                                       ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                                   ; Enable             ; Enable             ;
+; Verilog Version                                                                 ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                                    ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                        ; Auto               ; Auto               ;
+; Safe State Machine                                                              ; Off                ; Off                ;
+; Extract Verilog State Machines                                                  ; On                 ; On                 ;
+; Extract VHDL State Machines                                                     ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                               ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                      ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                                  ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                         ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                       ; On                 ; On                 ;
+; Parallel Synthesis                                                              ; On                 ; On                 ;
+; DSP Block Balancing                                                             ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                              ; On                 ; On                 ;
+; Power-Up Don't Care                                                             ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                                    ; Off                ; Off                ;
+; Remove Duplicate Registers                                                      ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                            ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                          ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                           ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                       ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                            ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                             ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                                  ; Off                ; Off                ;
+; Optimization Technique                                                          ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                              ; 70                 ; 70                 ;
+; Auto Carry Chains                                                               ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                            ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                           ; Off                ; Off                ;
+; Auto ROM Replacement                                                            ; On                 ; On                 ;
+; Auto RAM Replacement                                                            ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                      ; On                 ; On                 ;
+; Auto Shift Register Replacement                                                 ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                                 ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                                   ; On                 ; On                 ;
+; Strict RAM Replacement                                                          ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                               ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                           ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                                   ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                             ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                               ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                         ; On                 ; On                 ;
+; Report Parameter Settings                                                       ; On                 ; On                 ;
+; Report Source Assignments                                                       ; On                 ; On                 ;
+; Report Connectivity Checks                                                      ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                              ; Off                ; Off                ;
+; Synchronization Register Chain Length                                           ; 3                  ; 3                  ;
+; Power Optimization During Synthesis                                             ; Normal compilation ; Normal compilation ;
+; HDL message level                                                               ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                                 ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                        ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                              ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                       ; 100                ; 100                ;
+; Clock MUX Protection                                                            ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                     ; Off                ; Off                ;
+; Block Design Naming                                                             ; Auto               ; Auto               ;
+; SDC constraint protection                                                       ; Off                ; Off                ;
+; Synthesis Effort                                                                ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal                    ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                            ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                              ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                     ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                          ; On                 ; On                 ;
+; Automatic Parallel Synthesis                                                    ; On                 ; On                 ;
+; Partial Reconfiguration Bitstream ID                                            ; Off                ; Off                ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
 
 
 +---------------------------------------------------------+
@@ -523,54 +398,14 @@ Note: In order to hide this table in the UI and the text report file, please set
 +------+-------+----------+-------------------------------------------+
 
 
-+-----------------------------------------------------+
-; Post-Synthesis Netlist Statistics for Top Partition ;
-+-----------------------+-----------------------------+
-; Type                  ; Count                       ;
-+-----------------------+-----------------------------+
-; arriav_ff             ; 1                           ;
-;     CLR               ; 1                           ;
-; arriav_lcell_comb     ; 208                         ;
-;     arith             ; 11                          ;
-;         0 data inputs ; 2                           ;
-;         1 data inputs ; 1                           ;
-;         2 data inputs ; 8                           ;
-;     extend            ; 8                           ;
-;         7 data inputs ; 8                           ;
-;     normal            ; 130                         ;
-;         0 data inputs ; 1                           ;
-;         2 data inputs ; 6                           ;
-;         3 data inputs ; 13                          ;
-;         4 data inputs ; 27                          ;
-;         5 data inputs ; 42                          ;
-;         6 data inputs ; 41                          ;
-;     shared            ; 59                          ;
-;         0 data inputs ; 7                           ;
-;         2 data inputs ; 52                          ;
-; boundary_port         ; 53                          ;
-;                       ;                             ;
-; Max LUT depth         ; 19.30                       ;
-; Average LUT depth     ; 14.43                       ;
-+-----------------------+-----------------------------+
-
-
-+-------------------------------+
-; Elapsed Time Per Partition    ;
-+----------------+--------------+
-; Partition Name ; Elapsed Time ;
-+----------------+--------------+
-; Top            ; 00:00:06     ;
-+----------------+--------------+
-
-
-+-------------------------------+
-; Analysis & Synthesis Messages ;
-+-------------------------------+
++---------------------------------+
+; Analysis & Elaboration Messages ;
++---------------------------------+
 Info: *******************************************************************
-Info: Running Quartus Prime Analysis & Synthesis
-    Info: Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
-    Info: Processing started: Thu Sep 14 23:05:38 2023
-Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ALU -c ALU
+Info: Running Quartus Prime Analysis & Elaboration
+    Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+    Info: Processing started: Fri Sep 29 19:19:28 2023
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ALU -c ALU --analysis_and_elaboration
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file divisionnbit_tb.sv
@@ -656,53 +491,17 @@ Info (12128): Elaborating entity "shiftLeft" for hierarchy "shiftLeft:dutLeft" F
 Info (12128): Elaborating entity "shiftRight" for hierarchy "shiftRight:dutRight" File: C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3/aluModos.sv Line: 215
 Info (12128): Elaborating entity "decodificador_modos" for hierarchy "decodificador_modos:disp" File: C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3/aluModos.sv Line: 230
 Warning (12241): 4 hierarchies have connectivity warnings - see the Connectivity Checks report folder
-Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "display2[0]" is stuck at VCC File: C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3/aluModos.sv Line: 10
-    Warning (13410): Pin "display2[1]" is stuck at VCC File: C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3/aluModos.sv Line: 10
-    Warning (13410): Pin "display2[2]" is stuck at VCC File: C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3/aluModos.sv Line: 10
-    Warning (13410): Pin "display2[3]" is stuck at VCC File: C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3/aluModos.sv Line: 10
-    Warning (13410): Pin "display2[4]" is stuck at VCC File: C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3/aluModos.sv Line: 10
-    Warning (13410): Pin "display2[5]" is stuck at VCC File: C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3/aluModos.sv Line: 10
-    Warning (13410): Pin "display2[6]" is stuck at VCC File: C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3/aluModos.sv Line: 10
-    Warning (13410): Pin "display3[1]" is stuck at VCC File: C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3/aluModos.sv Line: 11
-    Warning (13410): Pin "display3[2]" is stuck at VCC File: C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3/aluModos.sv Line: 11
-    Warning (13410): Pin "display3[3]" is stuck at VCC File: C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3/aluModos.sv Line: 11
-    Warning (13410): Pin "display3[4]" is stuck at VCC File: C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3/aluModos.sv Line: 11
-    Warning (13410): Pin "display3[5]" is stuck at VCC File: C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3/aluModos.sv Line: 11
-    Warning (13410): Pin "display3[6]" is stuck at VCC File: C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3/aluModos.sv Line: 11
-    Warning (13410): Pin "display4[3]" is stuck at VCC File: C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3/aluModos.sv Line: 12
-    Warning (13410): Pin "display5[0]" is stuck at VCC File: C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3/aluModos.sv Line: 13
-    Warning (13410): Pin "display5[1]" is stuck at VCC File: C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3/aluModos.sv Line: 13
-    Warning (13410): Pin "display5[2]" is stuck at VCC File: C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3/aluModos.sv Line: 13
-    Warning (13410): Pin "display5[3]" is stuck at VCC File: C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3/aluModos.sv Line: 13
-    Warning (13410): Pin "display5[4]" is stuck at VCC File: C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3/aluModos.sv Line: 13
-    Warning (13410): Pin "display5[5]" is stuck at VCC File: C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3/aluModos.sv Line: 13
-    Warning (13410): Pin "display5[6]" is stuck at VCC File: C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3/aluModos.sv Line: 13
-    Warning (13410): Pin "display6[0]" is stuck at VCC File: C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3/aluModos.sv Line: 15
-    Warning (13410): Pin "display6[1]" is stuck at VCC File: C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3/aluModos.sv Line: 15
-    Warning (13410): Pin "display6[2]" is stuck at VCC File: C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3/aluModos.sv Line: 15
-    Warning (13410): Pin "display6[3]" is stuck at VCC File: C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3/aluModos.sv Line: 15
-    Warning (13410): Pin "display6[4]" is stuck at VCC File: C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3/aluModos.sv Line: 15
-    Warning (13410): Pin "display6[5]" is stuck at VCC File: C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3/aluModos.sv Line: 15
-    Warning (13410): Pin "display6[6]" is stuck at VCC File: C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3/aluModos.sv Line: 15
-Info (286030): Timing-Driven Synthesis is running
 Info (144001): Generated suppressed messages file C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3/output_files/ALU.map.smsg
-Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
-    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 260 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 11 input pins
-    Info (21059): Implemented 42 output pins
-    Info (21061): Implemented 207 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 40 warnings
-    Info: Peak virtual memory: 4812 megabytes
-    Info: Processing ended: Thu Sep 14 23:06:06 2023
-    Info: Elapsed time: 00:00:28
-    Info: Total CPU time (on all processors): 00:00:35
+Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 11 warnings
+    Info: Peak virtual memory: 4767 megabytes
+    Info: Processing ended: Fri Sep 29 19:19:45 2023
+    Info: Elapsed time: 00:00:17
+    Info: Total CPU time (on all processors): 00:00:38
 
 
-+------------------------------------------+
-; Analysis & Synthesis Suppressed Messages ;
-+------------------------------------------+
++--------------------------------------------+
+; Analysis & Elaboration Suppressed Messages ;
++--------------------------------------------+
 The suppressed messages can be found in C:/Users/maxta/Documents/GitHub/mcarranza-digital-design-lab-2023/Laboratorio3/output_files/ALU.map.smsg.
 
 
