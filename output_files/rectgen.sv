@@ -1,7 +1,7 @@
 
 // con este modulo genero un rectangulo de dimensiones width x height
 
-module rectgen #(parameter WIDTH = 76, HEIGHT = 56) (
+module rectgen #(parameter WIDTH = 56, HEIGHT = 56) (
 	input logic [9:0] x, y, // paso las posiciones de x e y en la pantalla
 	output logic [WIDTH-1:0] out, // La salida es un vector de longitud WIDTH-1
 	output logic [7:0] color	// salida del color asociado al vector generado
