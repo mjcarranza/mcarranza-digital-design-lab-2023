@@ -38,6 +38,7 @@ module revisoGane_tb;
 	 #10;
 	 
 	 
+	 
 	 banderas_matriz[1] = 8'b00000000;
 	 #10;
    

@@ -2,12 +2,12 @@ module selecMinas_tb;
 
   reg [3:0] switch_data;
   reg switch_inicio;
-  reg [7:0] matrix [7:0];
+  reg [7:0] matriz [7:0];
 
   selecMinas uut (
     .switch_data(switch_data),
     .switch_inicio(switch_inicio),
-    .matrix(matrix)
+    .matriz(matriz)
   );
 
   initial begin
