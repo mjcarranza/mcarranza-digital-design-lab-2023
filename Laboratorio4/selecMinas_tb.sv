@@ -2,7 +2,7 @@ module selecMinas_tb;
 
   reg [3:0] switch_data;
   reg switch_inicio;
-  wire [7:0] matrix [7:0];
+  reg [7:0] matrix [7:0];
 
   selecMinas uut (
     .switch_data(switch_data),
