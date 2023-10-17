@@ -19,7 +19,7 @@ module BuscaMinas_tb;
     );
 
     // Clock generation
-    always #5 clk = ~clk;
+    always #1 clk = ~clk;
 
     initial begin
         clk = 0;
@@ -29,6 +29,7 @@ module BuscaMinas_tb;
 		  
 		  rst = 0;
 		  #10;
+
 		  
 		  switches_bombas = 4'b0001;
 		  #10;
@@ -36,7 +37,43 @@ module BuscaMinas_tb;
 		  inicio = 1;
 		  #10;
 		  inicio = 0;
-        
+		 
+		  
+        button_down = 0;
+		  #1;
+		  button_down = 1;
+		  #10;
+		  
+		  button_bomba = 0;
+		  #1;
+		  button_bomba = 1;
+		  #10;
+		  
+		  button_right = 0;
+		  #1;
+		  button_right = 1;
+		  #10;
+		  
+		  button_bandera = 0;
+		  #1;
+		  button_bandera = 1;
+		  #10;
+		  
+		  $display("Deberia de ganar");
+		  
+		  rst = 1;
+		  #10;
+		  
+		  rst = 0;
+		  #10;
+		  
+		  
+		  switches_bombas = 4'b0010;
+		  #10;
+		  
+		  inicio = 1;
+		  #10;
+		  inicio = 0;
 		  
 		  button_down = 0;
 		  #1;
@@ -56,17 +93,19 @@ module BuscaMinas_tb;
 		  button_down = 0;
 		  #1;
 		  button_down = 1;
-		  #100;
-		  
-		  button_bandera = 0;
-		  #1;
-		  button_bandera = 1;
 		  #10;
 		  
-		  button_down = 0;
+		  button_right = 0;
 		  #1;
-		  button_down = 1;
+		  button_right = 1;
 		  #10;
+		  
+		  button_bomba = 0;
+		  #1;
+		  button_bomba = 1;
+		  #10;
+		  $display("Deberia de perder");
+		  
 		 
 		  
     end

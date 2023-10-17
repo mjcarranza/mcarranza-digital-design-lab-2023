@@ -21,6 +21,10 @@ module BuscaMinas(
 	reg [7:0] matriz_bombas [7:0];
 	reg [7:0] matriz_banderas [7:0];
 	reg [7:0] matriz_banderas_aux [7:0];
+	
+	
+	reg [7:0] matriz_seleccion [7:0];
+	reg [7:0] matriz_seleccion_aux [7:0];
 
 	reg [2:0] col_actual = 0;
 	reg [2:0] fila_actual = 0;
@@ -32,8 +36,16 @@ module BuscaMinas(
 
 	
 	always @(clk) begin
+	
+		if (rst) begin 
+			for (int i = 0; i < 8; i++) begin
+				matriz_banderas[i] = 8'b00000000;
+			end
+		end
 		if (m_inicio == 1) begin
 			cantidad_banderas = 4'b0000;
+			col_actual = 0;
+			fila_actual = 0;
 			for (int i = 0; i < 8; i++) begin
 				matriz_banderas[i] = 8'b00000000;
 			end
@@ -52,6 +64,11 @@ module BuscaMinas(
 		
 		if (m_revisoBomba == 1) begin 
 			poner_bomba = 0;
+			$display("col: %d fila: %d, v:%b", col_actual, fila_actual, matriz_bombas[col_actual][fila_actual]);
+			$display("entro a reviso pierde con %b", pierde);
+			if (pierde) begin 
+				$display("Perdio");
+			end
 		end
 		
 		if (m_ponerBandera == 1) begin 
@@ -72,6 +89,7 @@ module BuscaMinas(
 		end
 		
 		if (m_revisoGane == 1) begin 
+			poner_bandera = 0;
 			$display("entro a reviso gane con %b", gana);
 			if (gana) begin 
 				$display("Gano");
@@ -131,7 +149,16 @@ module BuscaMinas(
     .banderas_matriz(matriz_banderas),
     .bombas_matriz(matriz_bombas),
     .gane(gana)
-  );
+	);
+	
+	revisoBomba bombauut (
+		.col(col_actual), 
+		.fila(fila_actual), 
+		.bombas_matriz(matriz_bombas), 
+		.pierde(pierde)
+	);
+  
+  
 	
 	decodificador d1(
 		.A(cantidad_bombas[3]),
