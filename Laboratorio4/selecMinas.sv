@@ -9,7 +9,7 @@ module selecMinas(
 	reg [2:0] fil = 3'b001;
 	reg [2:0] contador = 3'b000;
 
-  integer i, j, col, fila;
+  integer i, j, col, fila, p;
   
   always_ff @(posedge switch_inicio) begin
     for (i = 0; i < 8; i = i + 1) begin
@@ -19,14 +19,26 @@ module selecMinas(
     end
 
     for (i = 0; i < switch_data; i = i + 1) begin
-      matriz[cola][fil] = 1;
-		if (cola > 7) cola = 0; else cola = cola+1;
-		if (fil > 7) fil = 0; else fil = fil+1;
+	 
+		if (matriz[cola][fil] == 1) begin 
+			cola = cola +1;
+			matriz[cola][fil] = 1;
+		end else matriz[cola][fil] = 1;
+		
+		
+		for (p=0; p<3; p= p+1) begin
+			if (cola > 7) cola = 0; else cola = cola+1;
+		end
+		
+		for (p=0; p< switch_data; p = p+1) begin
+			if (fil > 7) fil = 0; else fil = fil+1;
+		end	
     end
 	 
 	 for (i = 0; i < 8; i = i + 1) begin
       $display("%b", matriz[i]);
     end
+	 $display("b");
 	 
 	 
 	 
@@ -72,7 +84,6 @@ module selecMinas(
 			
 			bombas_adyacentes[col][fila] = contador;
 			
-			$display("bombas_adyacentes[%0d][%0d] = %0d", col, fila, bombas_adyacentes[col][fila]);
 			
       end
     end

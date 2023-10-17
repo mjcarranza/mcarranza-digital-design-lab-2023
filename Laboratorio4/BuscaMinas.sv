@@ -7,6 +7,8 @@ module BuscaMinas(
 	input wire button_bomba, 
 	input wire button_bandera,
 	output logic [6:0] display_0,
+	output logic [6:0] display_2,
+	output logic [6:0] display_3,
 	output logic [6:0] display_6
 	
 );
@@ -40,12 +42,6 @@ module BuscaMinas(
 	
 	always @(clk) begin
 	
-		if (rst) begin 
-			for (int i = 0; i < 8; i++) begin
-				matriz_banderas[i] = 8'b00000000;
-				matriz_seleccion[i] = 8'b00000000;
-			end
-		end
 		if (m_inicio == 1) begin
 			cantidad_banderas = 4'b0000;
 			col_actual = 0;
@@ -68,9 +64,6 @@ module BuscaMinas(
 		
 		if (m_revisoBomba == 1) begin 
 			poner_bomba = 0;
-			
-			
-			
 			
 			$display("col: %d fila: %d, v:%b", col_actual, fila_actual, matriz_bombas[col_actual][fila_actual]);
 			$display("entro a reviso pierde con %b", pierde);
@@ -195,6 +188,36 @@ module BuscaMinas(
 		.e(display_0[2]),
 		.f(display_0[1]),
 		.g(display_0[0])
+	);
+	
+	
+		decodificador d2(
+		.A(0),
+		.B(col_actual[2]),
+		.C(col_actual[1]),
+		.D(col_actual[0]),
+		.a(display_2[6]),
+		.b(display_2[5]),
+		.c(display_2[4]),
+		.d(display_2[3]),
+		.e(display_2[2]),
+		.f(display_2[1]),
+		.g(display_2[0])
+	);
+	
+	
+		decodificador d3(
+		.A(0),
+		.B(fila_actual[2]),
+		.C(fila_actual[1]),
+		.D(fila_actual[0]),
+		.a(display_3[6]),
+		.b(display_3[5]),
+		.c(display_3[4]),
+		.d(display_3[3]),
+		.e(display_3[2]),
+		.f(display_3[1]),
+		.g(display_3[0])
 	);
 	
 	decodificador d6(

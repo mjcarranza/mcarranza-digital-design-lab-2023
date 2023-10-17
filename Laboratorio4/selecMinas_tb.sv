@@ -22,8 +22,31 @@ module selecMinas_tb;
 	 
 	 switch_inicio = 1; 
 	 #20;
+	 switch_inicio = 0;	
+	 #10
 	 
+	 switch_data = 4'b1001;
+    #10; 
 	 
+	 switch_inicio = 1; 
+	 #20;
+	 switch_inicio = 0;	
+	 #10
+
+    switch_data = 4'b0011;
+	 #10; 
+	 
+	 switch_inicio = 1; 
+	 #20;
+	 
+	 switch_inicio = 0;	
+	 #10
+
+    switch_data = 4'b1111;
+	 #10; 
+	 
+	 switch_inicio = 1; 
+	 #20;
   end
 
 endmodule
