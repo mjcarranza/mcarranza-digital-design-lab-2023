@@ -33,6 +33,9 @@ module BuscaMinas(
 	reg [2:0] fila_actual_aux = 0;
 	
 	
+   reg [2:0] bombas_adyacentes [0:7][0:7];
+	
+	
 
 	
 	always @(clk) begin
@@ -40,6 +43,7 @@ module BuscaMinas(
 		if (rst) begin 
 			for (int i = 0; i < 8; i++) begin
 				matriz_banderas[i] = 8'b00000000;
+				matriz_seleccion[i] = 8'b00000000;
 			end
 		end
 		if (m_inicio == 1) begin
@@ -64,10 +68,20 @@ module BuscaMinas(
 		
 		if (m_revisoBomba == 1) begin 
 			poner_bomba = 0;
+			
+			
+			
+			
 			$display("col: %d fila: %d, v:%b", col_actual, fila_actual, matriz_bombas[col_actual][fila_actual]);
 			$display("entro a reviso pierde con %b", pierde);
 			if (pierde) begin 
 				$display("Perdio");
+			end
+			
+			$display("seleccion: ");
+			for (int i = 0; i < 8; i++) begin
+				$display("%b", matriz_seleccion_aux[i]);
+				matriz_seleccion[i] = matriz_seleccion_aux[i];
 			end
 		end
 		
@@ -122,7 +136,8 @@ module BuscaMinas(
 	selecMinas uut (
 		.switch_data(switches_bombas),
 		.switch_inicio(inicio),
-		.matriz(matriz_bombas)
+		.matriz(matriz_bombas), 
+		.bombas_adyacentes(bombas_adyacentes)
 	);
 	
 	moverse mov (
@@ -144,6 +159,14 @@ module BuscaMinas(
 		.matriz_salida(matriz_banderas_aux),
 		.cantidad_banderas(cantidad_banderas_aux)
 	);
+	
+	colocarMostrar mostraruut (
+		.col(col_actual), 
+		.fila(fila_actual), 
+		.seleccion_matriz(matriz_seleccion),
+		.matriz_salida(matriz_seleccion_aux),
+		.button_bomba(button_bomba)
+   );
 	
 	revisoGane ganeuut (
     .banderas_matriz(matriz_banderas),

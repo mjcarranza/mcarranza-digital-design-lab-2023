@@ -3,7 +3,7 @@ module colocarMostrar_tb;
   reg [2:0] col;
   reg [2:0] fila;
   reg [7:0] seleccion_matriz [7:0];
-  wire button_bomba;
+  reg button_bomba;
   reg [7:0] matriz_salida [7:0];
   
   colocarMostrar uut (

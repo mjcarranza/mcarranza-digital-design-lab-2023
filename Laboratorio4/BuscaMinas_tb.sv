@@ -31,7 +31,7 @@ module BuscaMinas_tb;
 		  #10;
 
 		  
-		  switches_bombas = 4'b0001;
+		  switches_bombas = 4'b1101;
 		  #10;
 		  
 		  inicio = 1;
@@ -59,22 +59,6 @@ module BuscaMinas_tb;
 		  button_bandera = 1;
 		  #10;
 		  
-		  $display("Deberia de ganar");
-		  
-		  rst = 1;
-		  #10;
-		  
-		  rst = 0;
-		  #10;
-		  
-		  
-		  switches_bombas = 4'b0010;
-		  #10;
-		  
-		  inicio = 1;
-		  #10;
-		  inicio = 0;
-		  
 		  button_down = 0;
 		  #1;
 		  button_down = 1;
@@ -104,7 +88,6 @@ module BuscaMinas_tb;
 		  #1;
 		  button_bomba = 1;
 		  #10;
-		  $display("Deberia de perder");
 		  
 		 
 		  

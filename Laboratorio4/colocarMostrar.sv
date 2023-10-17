@@ -7,22 +7,13 @@ module colocarMostrar(
 );
 	always @(negedge button_bomba) begin
 		if (~button_bomba) begin
-		
-			$display("col:%d fila:%d", col, fila);
 			for (int i = 0; i < 8; i++) begin
 				matriz_salida[i] = seleccion_matriz[i];
 			end
 			
-			if ((col-1) >=0 && (fila-1) >=0) matriz_salida[col-1][fila-1] = 1;
-			if ((col-1) >=0 &&  fila >=0) 	matriz_salida[col-1][fila]   = 1;
-			if ((col-1) >=0 && (fila+1) >=0) matriz_salida[col-1][fila+1] = 1;
-			if (col >=0 && (fila-1) >=0) 		matriz_salida[col][fila-1]   = 1;
-			if (col >=0 && fila >=0) 			matriz_salida[col][fila] 	  = 1;
-			if (col >=0 && (fila+1) >=0) 		matriz_salida[col][fila+1]   = 1;
-			if ((col+1) >=0 && (fila-1) >=0) matriz_salida[col+1][fila-1] = 1;
-			if ((col+1) >=0 && fila >=0) 		matriz_salida[col+1][fila]   = 1;
-			if ((col+1) >=0 && (fila+1) >=0) matriz_salida[col+1][fila+1] = 1;
-			
+			if (seleccion_matriz[col][fila] == 0) begin 
+				matriz_salida[col][fila] = 1;
+			end 
 		end
 	end 
 

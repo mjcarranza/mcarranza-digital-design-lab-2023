@@ -3,11 +3,13 @@ module selecMinas_tb;
   reg [3:0] switch_data;
   reg switch_inicio;
   reg [7:0] matriz [7:0];
+  reg [2:0] bombas_adyacentes [0:7][0:7];
 
   selecMinas uut (
     .switch_data(switch_data),
     .switch_inicio(switch_inicio),
-    .matriz(matriz)
+    .matriz(matriz),
+	 .bombas_adyacentes(bombas_adyacentes)
   );
 
   initial begin
