@@ -82,6 +82,9 @@ set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id revisoBomba_
 set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME revisoBomba_tb -section_id revisoBomba_tb
 set_global_assignment -name SYSTEMVERILOG_FILE BuscaMinas_tb.sv
 set_global_assignment -name SYSTEMVERILOG_FILE decodificador.sv
+set_global_assignment -name EDA_TEST_BENCH_NAME BuscaMinas_tb -section_id eda_simulation
+set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id BuscaMinas_tb
+set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME BuscaMinas_tb -section_id BuscaMinas_tb
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
@@ -90,8 +93,5 @@ set_global_assignment -name EDA_TEST_BENCH_FILE moverse_tb.sv -section_id movers
 set_global_assignment -name EDA_TEST_BENCH_FILE colocarBandera_tb.sv -section_id colocarBandera_tb
 set_global_assignment -name EDA_TEST_BENCH_FILE revisoGane_tb.sv -section_id revisoGane_tb
 set_global_assignment -name EDA_TEST_BENCH_FILE revisoBomba_tb.sv -section_id revisoBomba_tb
-set_global_assignment -name EDA_TEST_BENCH_NAME BuscaMinas_tb -section_id eda_simulation
-set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id BuscaMinas_tb
-set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME BuscaMinas_tb -section_id BuscaMinas_tb
 set_global_assignment -name EDA_TEST_BENCH_FILE BuscaMinas_tb.sv -section_id BuscaMinas_tb
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

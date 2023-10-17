@@ -5,13 +5,15 @@ module colocarBandera_tb;
   reg [7:0] banderas_matriz [7:0];
   reg [7:0] matriz_salida [7:0];
   reg [3:0] cantidad_banderas;
+  reg seguir;
   
   colocarBandera uut (
 	.col(col), 
 	.fila(fila), 
 	.banderas_matriz(banderas_matriz),
 	.matriz_salida(matriz_salida),
-	.cantidad_banderas(cantidad_banderas)
+	.cantidad_banderas(cantidad_banderas),
+	.seguir(seguir)
   );
   
   initial begin

@@ -4,8 +4,8 @@ module selecMinas(
   output reg [7:0] matriz [7:0]
 );
 
-	reg [2:0] col = 3'b000;
-	reg [2:0] fila = 3'b010;
+	reg [2:0] col = 3'b001;
+	reg [2:0] fila = 3'b001;
 
   integer i, j;
   
