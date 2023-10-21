@@ -18,21 +18,13 @@
 #
 # Quartus Prime
 # Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-<<<<<<< Updated upstream
-# Date created = 03:11:58  October 10, 2023
-=======
-# Date created = 08:49:03  October 17, 2023
->>>>>>> Stashed changes
+# Date created = 10:04:37  October 17, 2023
 #
 # -------------------------------------------------------------------------- #
 
 QUARTUS_VERSION = "18.1"
-<<<<<<< Updated upstream
-DATE = "03:11:58  October 10, 2023"
-=======
-DATE = "08:49:03  October 17, 2023"
->>>>>>> Stashed changes
+DATE = "10:04:37  October 17, 2023"
 
 # Revisions
 
-PROJECT_REVISION = "BuscaMinas"
+PROJECT_REVISION = "vga"

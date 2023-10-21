@@ -18,21 +18,27 @@
 #
 # Quartus Prime
 # Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-<<<<<<< Updated upstream
-# Date created = 03:11:58  October 10, 2023
-=======
-# Date created = 08:49:03  October 17, 2023
->>>>>>> Stashed changes
+# Date created = 10:00:32  October 17, 2023
+#
+# -------------------------------------------------------------------------- #
+#
+# Notes:
+#
+# 1) The default values for assignments are stored in the file:
+#		vga_assignment_defaults.qdf
+#    If this file doesn't exist, see file:
+#		assignment_defaults.qdf
+#
+# 2) Altera recommends that you do not modify this file. This
+#    file is updated automatically by the Quartus Prime software
+#    and any changes you make may be lost or overwritten.
 #
 # -------------------------------------------------------------------------- #
 
-QUARTUS_VERSION = "18.1"
-<<<<<<< Updated upstream
-DATE = "03:11:58  October 10, 2023"
-=======
-DATE = "08:49:03  October 17, 2023"
->>>>>>> Stashed changes
 
-# Revisions
-
-PROJECT_REVISION = "BuscaMinas"
+set_global_assignment -name FAMILY "Cyclone V"
+set_global_assignment -name DEVICE 5CGXFC7C7F23C8
+set_global_assignment -name TOP_LEVEL_ENTITY vga
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION 18.1.0
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "10:00:32  OCTOBER 17, 2023"
+set_global_assignment -name LAST_QUARTUS_VERSION "18.1.0 Lite Edition"

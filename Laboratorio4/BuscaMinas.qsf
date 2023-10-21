@@ -46,10 +46,6 @@ set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
 set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
 set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
 set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 256
-set_global_assignment -name SYSTEMVERILOG_FILE BuscaMinas.sv
-set_global_assignment -name SYSTEMVERILOG_FILE FSM.sv
-set_global_assignment -name SYSTEMVERILOG_FILE selecMinas.sv
-set_global_assignment -name SYSTEMVERILOG_FILE selecMinas_tb.sv
 set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
 set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
 set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim (Verilog)"
@@ -60,33 +56,21 @@ set_global_assignment -name EDA_NATIVELINK_SIMULATION_TEST_BENCH BuscaMinas_tb -
 set_global_assignment -name EDA_TEST_BENCH_NAME selecMinas_tb -section_id eda_simulation
 set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id selecMinas_tb
 set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME selecMinas_tb -section_id selecMinas_tb
-set_global_assignment -name SYSTEMVERILOG_FILE moverse.sv
-set_global_assignment -name SYSTEMVERILOG_FILE moverse_tb.sv
 set_global_assignment -name EDA_TEST_BENCH_NAME moverse_tb -section_id eda_simulation
 set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id moverse_tb
 set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME moverse_tb -section_id moverse_tb
-set_global_assignment -name SYSTEMVERILOG_FILE colocarBandera.sv
-set_global_assignment -name SYSTEMVERILOG_FILE colocarBandera_tb.sv
 set_global_assignment -name EDA_TEST_BENCH_NAME colocarBandera_tb -section_id eda_simulation
 set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id colocarBandera_tb
 set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME colocarBandera_tb -section_id colocarBandera_tb
-set_global_assignment -name SYSTEMVERILOG_FILE revisoGane.sv
-set_global_assignment -name SYSTEMVERILOG_FILE revisoGane_tb.sv
 set_global_assignment -name EDA_TEST_BENCH_NAME revisoGane_tb -section_id eda_simulation
 set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id revisoGane_tb
 set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME revisoGane_tb -section_id revisoGane_tb
-set_global_assignment -name SYSTEMVERILOG_FILE revisoBomba.sv
-set_global_assignment -name SYSTEMVERILOG_FILE revisoBomba_tb.sv
 set_global_assignment -name EDA_TEST_BENCH_NAME revisoBomba_tb -section_id eda_simulation
 set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id revisoBomba_tb
 set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME revisoBomba_tb -section_id revisoBomba_tb
-set_global_assignment -name SYSTEMVERILOG_FILE BuscaMinas_tb.sv
-set_global_assignment -name SYSTEMVERILOG_FILE decodificador.sv
 set_global_assignment -name EDA_TEST_BENCH_NAME BuscaMinas_tb -section_id eda_simulation
 set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id BuscaMinas_tb
 set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME BuscaMinas_tb -section_id BuscaMinas_tb
-set_global_assignment -name SYSTEMVERILOG_FILE colocarMostrar.sv
-set_global_assignment -name SYSTEMVERILOG_FILE colocarMostrar_tb.sv
 set_global_assignment -name EDA_TEST_BENCH_NAME colocarMostrar_tb -section_id eda_simulation
 set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id colocarMostrar_tb
 set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME colocarMostrar_tb -section_id colocarMostrar_tb
@@ -139,4 +123,20 @@ set_location_assignment PIN_AC25 -to display_3[3]
 set_location_assignment PIN_AB28 -to display_3[2]
 set_location_assignment PIN_AB25 -to display_3[1]
 set_location_assignment PIN_AB22 -to display_3[0]
+set_global_assignment -name SYSTEMVERILOG_FILE BuscaMinas.sv
+set_global_assignment -name SYSTEMVERILOG_FILE FSM.sv
+set_global_assignment -name SYSTEMVERILOG_FILE selecMinas.sv
+set_global_assignment -name SYSTEMVERILOG_FILE selecMinas_tb.sv
+set_global_assignment -name SYSTEMVERILOG_FILE moverse.sv
+set_global_assignment -name SYSTEMVERILOG_FILE moverse_tb.sv
+set_global_assignment -name SYSTEMVERILOG_FILE colocarBandera.sv
+set_global_assignment -name SYSTEMVERILOG_FILE colocarBandera_tb.sv
+set_global_assignment -name SYSTEMVERILOG_FILE revisoGane.sv
+set_global_assignment -name SYSTEMVERILOG_FILE revisoGane_tb.sv
+set_global_assignment -name SYSTEMVERILOG_FILE revisoBomba.sv
+set_global_assignment -name SYSTEMVERILOG_FILE revisoBomba_tb.sv
+set_global_assignment -name SYSTEMVERILOG_FILE BuscaMinas_tb.sv
+set_global_assignment -name SYSTEMVERILOG_FILE decodificador.sv
+set_global_assignment -name SYSTEMVERILOG_FILE colocarMostrar.sv
+set_global_assignment -name SYSTEMVERILOG_FILE colocarMostrar_tb.sv
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
