@@ -1,0 +1,142 @@
+# -------------------------------------------------------------------------- #
+#
+# Copyright (C) 2018  Intel Corporation. All rights reserved.
+# Your use of Intel Corporation's design tools, logic functions 
+# and other software and tools, and its AMPP partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Intel Program License 
+# Subscription Agreement, the Intel Quartus Prime License Agreement,
+# the Intel FPGA IP License Agreement, or other applicable license
+# agreement, including, without limitation, that your use is for
+# the sole purpose of programming logic devices manufactured by
+# Intel and sold by Intel or its authorized distributors.  Please
+# refer to the applicable agreement for further details.
+#
+# -------------------------------------------------------------------------- #
+#
+# Quartus Prime
+# Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+# Date created = 03:11:58  October 10, 2023
+#
+# -------------------------------------------------------------------------- #
+#
+# Notes:
+#
+# 1) The default values for assignments are stored in the file:
+#		BuscaMinas_assignment_defaults.qdf
+#    If this file doesn't exist, see file:
+#		assignment_defaults.qdf
+#
+# 2) Altera recommends that you do not modify this file. This
+#    file is updated automatically by the Quartus Prime software
+#    and any changes you make may be lost or overwritten.
+#
+# -------------------------------------------------------------------------- #
+
+
+set_global_assignment -name FAMILY "Cyclone V"
+set_global_assignment -name DEVICE 5CSEMA5F31C6
+set_global_assignment -name TOP_LEVEL_ENTITY BuscaMinas
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION 18.1.0
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "03:11:58  OCTOBER 10, 2023"
+set_global_assignment -name LAST_QUARTUS_VERSION "18.1.0 Lite Edition"
+set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
+set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 256
+set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
+set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim (Verilog)"
+set_global_assignment -name EDA_TIME_SCALE "1 ps" -section_id eda_simulation
+set_global_assignment -name EDA_OUTPUT_DATA_FORMAT "VERILOG HDL" -section_id eda_simulation
+set_global_assignment -name EDA_TEST_BENCH_ENABLE_STATUS TEST_BENCH_MODE -section_id eda_simulation
+set_global_assignment -name EDA_NATIVELINK_SIMULATION_TEST_BENCH BuscaMinas_tb -section_id eda_simulation
+set_global_assignment -name EDA_TEST_BENCH_NAME selecMinas_tb -section_id eda_simulation
+set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id selecMinas_tb
+set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME selecMinas_tb -section_id selecMinas_tb
+set_global_assignment -name EDA_TEST_BENCH_NAME moverse_tb -section_id eda_simulation
+set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id moverse_tb
+set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME moverse_tb -section_id moverse_tb
+set_global_assignment -name EDA_TEST_BENCH_NAME colocarBandera_tb -section_id eda_simulation
+set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id colocarBandera_tb
+set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME colocarBandera_tb -section_id colocarBandera_tb
+set_global_assignment -name EDA_TEST_BENCH_NAME revisoGane_tb -section_id eda_simulation
+set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id revisoGane_tb
+set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME revisoGane_tb -section_id revisoGane_tb
+set_global_assignment -name EDA_TEST_BENCH_NAME revisoBomba_tb -section_id eda_simulation
+set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id revisoBomba_tb
+set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME revisoBomba_tb -section_id revisoBomba_tb
+set_global_assignment -name EDA_TEST_BENCH_NAME BuscaMinas_tb -section_id eda_simulation
+set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id BuscaMinas_tb
+set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME BuscaMinas_tb -section_id BuscaMinas_tb
+set_global_assignment -name EDA_TEST_BENCH_NAME colocarMostrar_tb -section_id eda_simulation
+set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id colocarMostrar_tb
+set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME colocarMostrar_tb -section_id colocarMostrar_tb
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_location_assignment PIN_AE26 -to display_0[6]
+set_location_assignment PIN_AE27 -to display_0[5]
+set_location_assignment PIN_AE28 -to display_0[4]
+set_location_assignment PIN_AG27 -to display_0[3]
+set_location_assignment PIN_AF28 -to display_0[2]
+set_location_assignment PIN_AG28 -to display_0[1]
+set_location_assignment PIN_AH28 -to display_0[0]
+set_location_assignment PIN_V25 -to display_6[6]
+set_location_assignment PIN_AA28 -to display_6[5]
+set_location_assignment PIN_Y27 -to display_6[4]
+set_location_assignment PIN_AB27 -to display_6[3]
+set_location_assignment PIN_AB26 -to display_6[2]
+set_location_assignment PIN_AA26 -to display_6[1]
+set_location_assignment PIN_AA25 -to display_6[0]
+set_location_assignment PIN_AD10 -to inicio
+set_location_assignment PIN_AE12 -to rst
+set_location_assignment PIN_AF10 -to switches_bombas[3]
+set_location_assignment PIN_AF9 -to switches_bombas[2]
+set_location_assignment PIN_AC12 -to switches_bombas[1]
+set_location_assignment PIN_AB12 -to switches_bombas[0]
+set_location_assignment PIN_AA14 -to button_bandera
+set_location_assignment PIN_AA15 -to button_bomba
+set_location_assignment PIN_W15 -to button_down
+set_location_assignment PIN_Y16 -to button_right
+set_location_assignment PIN_AF14 -to clk
+set_global_assignment -name EDA_TEST_BENCH_FILE selecMinas_tb.sv -section_id selecMinas_tb
+set_global_assignment -name EDA_TEST_BENCH_FILE moverse_tb.sv -section_id moverse_tb
+set_global_assignment -name EDA_TEST_BENCH_FILE colocarBandera_tb.sv -section_id colocarBandera_tb
+set_global_assignment -name EDA_TEST_BENCH_FILE revisoGane_tb.sv -section_id revisoGane_tb
+set_global_assignment -name EDA_TEST_BENCH_FILE revisoBomba_tb.sv -section_id revisoBomba_tb
+set_global_assignment -name EDA_TEST_BENCH_FILE BuscaMinas_tb.sv -section_id BuscaMinas_tb
+set_global_assignment -name EDA_TEST_BENCH_FILE colocarMostrar_tb.sv -section_id colocarMostrar_tb
+set_location_assignment PIN_AB23 -to display_2[6]
+set_location_assignment PIN_AE29 -to display_2[5]
+set_location_assignment PIN_AD29 -to display_2[4]
+set_location_assignment PIN_AC28 -to display_2[3]
+set_location_assignment PIN_AD30 -to display_2[2]
+set_location_assignment PIN_AC29 -to display_2[1]
+set_location_assignment PIN_AC30 -to display_2[0]
+set_location_assignment PIN_AD26 -to display_3[6]
+set_location_assignment PIN_AC27 -to display_3[5]
+set_location_assignment PIN_AD25 -to display_3[4]
+set_location_assignment PIN_AC25 -to display_3[3]
+set_location_assignment PIN_AB28 -to display_3[2]
+set_location_assignment PIN_AB25 -to display_3[1]
+set_location_assignment PIN_AB22 -to display_3[0]
+set_global_assignment -name SYSTEMVERILOG_FILE BuscaMinas.sv
+set_global_assignment -name SYSTEMVERILOG_FILE FSM.sv
+set_global_assignment -name SYSTEMVERILOG_FILE selecMinas.sv
+set_global_assignment -name SYSTEMVERILOG_FILE selecMinas_tb.sv
+set_global_assignment -name SYSTEMVERILOG_FILE moverse.sv
+set_global_assignment -name SYSTEMVERILOG_FILE moverse_tb.sv
+set_global_assignment -name SYSTEMVERILOG_FILE colocarBandera.sv
+set_global_assignment -name SYSTEMVERILOG_FILE colocarBandera_tb.sv
+set_global_assignment -name SYSTEMVERILOG_FILE revisoGane.sv
+set_global_assignment -name SYSTEMVERILOG_FILE revisoGane_tb.sv
+set_global_assignment -name SYSTEMVERILOG_FILE revisoBomba.sv
+set_global_assignment -name SYSTEMVERILOG_FILE revisoBomba_tb.sv
+set_global_assignment -name SYSTEMVERILOG_FILE BuscaMinas_tb.sv
+set_global_assignment -name SYSTEMVERILOG_FILE decodificador.sv
+set_global_assignment -name SYSTEMVERILOG_FILE colocarMostrar.sv
+set_global_assignment -name SYSTEMVERILOG_FILE colocarMostrar_tb.sv
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
