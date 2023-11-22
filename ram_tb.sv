@@ -12,7 +12,7 @@ module ram_tb;
   wire [31:0] q;
 
   // Instantiate the RAM module
-  ram uut (
+  ram1 uut (
     .address(address),
     .clock(clock),
     .data(data),

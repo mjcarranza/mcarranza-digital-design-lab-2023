@@ -23,7 +23,7 @@ module paint_image(input logic clk, reset,
 	vga_sync vga_sync_inst(clk, reset, hsync, vsync, nsync, nblanc, clk_out, x, y);
 	
 	
-	ram1 ram_inst(address,clk,data,1'b0,q);
+	ram4 ram_inst(address,clk,data,1'b0,q);
 
    always @(*) begin
        if (x > X_BEGIN && x < X_FINAL  && y > Y_BEGIN && y < Y_FINAL)

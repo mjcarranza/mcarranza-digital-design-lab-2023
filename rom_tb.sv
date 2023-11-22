@@ -10,7 +10,7 @@ module rom_tb;
   wire [31:0] q;
 
   // Instantiate the ROM module
-  rom uut (
+  rom1 uut (
     .address(address),
     .clock(clock),
     .q(q)

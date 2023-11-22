@@ -1,4 +1,8 @@
-module cpu(input logic clkFPGA, rst);
+module cpu(input logic clkFPGA, rst,
+			output logic vgaclk, // 25.175 MHz VGA clock
+			output logic hsync, vsync,
+			output logic sync_b, blank_b, // To monitor & DAC
+			output logic [7:0] r, g, b);
 
 logic [31:0] pc, pc_out, Inst, RD1, RD2, ExtImm, SrcA, SrcB, ALUResult, ReadData, Result, PCPlus1, PCPlus2;
 logic PCSrc, MemtoReg, MemWrite, RegWrite, cout, negative, zero, ALUSrc;
@@ -20,7 +24,7 @@ mux2_1 #(.width(32)) mux_pc(.data0(PCPlus1), .data1(Result), .select(PCSrc), .re
 program_counter pc_inst(.clk(clk), .rst(~rst), .d(pc), .q(pc_out));
 
 //mod 2
-rom rom_inst(.address(pc_out[7:0]), .clock(clk_rom), .q(Inst));
+rom1 rom_inst(.address(pc_out[7:0]), .clock(clk_rom), .q(Inst));
 
 // mod 3
 control_unit contol_inst(.clk(clk), .rst(rst), .Cond(Inst[31:28]), .ALUFlags({negative, zero, cout, 1'b0}), .Op(Inst[27:26]),
@@ -63,10 +67,14 @@ alu  alu_inst(.A(RD1), .B(SrcB), .sel(ALUControl), .carry(cout),
 
 // mod 12
 //ram2 mem(.address(ALUResult[15:0]), .clock(clk), .data(RD2), .wren(1'b1), .q(ReadData)); // cambie el clk a lo contrario e igual no funciono
-ram mem(.address(ALUResult[15:0]), .clock(clk_mem), .data(RD2), .wren(MemWrite), .q(ReadData)); // cambie el clk a lo contrario e igual no funciono
+ram1 mem(.address(ALUResult[15:0]), .clock(clk_mem), .data(RD2), .wren(MemWrite), .q(ReadData)); // cambie el clk a lo contrario e igual no funciono
 
 // mod 13
 mux2_1 #(.width(32)) mux_result(.data1(ReadData), .data0(ALUResult), .select(MemtoReg), .result(Result)); 
+
+
+//instancia de VGA
+vga vga_inst(clkFPGA, rst, vgaclk, hsync, vsync, sync_b, blank_b, r, g, b);
 
 
 
