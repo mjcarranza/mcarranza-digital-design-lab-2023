@@ -26,3 +26,8 @@ module Contador(
    assign count = counter;
 
 endmodule
+
+
+
+
+
